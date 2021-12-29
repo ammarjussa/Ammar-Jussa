@@ -7,9 +7,8 @@ const Heading: React.FC = () => {
         <Line />
       </HeadingElements>
       <HeadingMain>
-        <span>
-          Hi there, I’m Ammar. <br />
-        </span>
+        <span>Hi there, I’m Ammar.</span>
+        <br />
         <span>
           Full Stack <span className="blue">Developer</span> <br />
         </span>

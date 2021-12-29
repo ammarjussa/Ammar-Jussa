@@ -19,7 +19,7 @@ export const Float = keyframes`
 
 export const HeadingMain = styled.h1`
   font-weight: 700;
-  font-size: 6vw;
+  font-size: 60px;
   line-height: 130%;
   letter-spacing: 0.03em;
 

@@ -14,7 +14,8 @@ export const Float = keyframes`
 const GlobalStyle = createGlobalStyle<{ theme: any }>`
 	html,
 	body {
-		padding: 5%;
+		padding-left: 5%;
+		padding-top: 5%;
 		margin: 0;
 		font-family: GothamPro, sans-serif;
 		// background-color: ${(props) => props.theme.colors.background};
