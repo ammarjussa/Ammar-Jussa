@@ -6,11 +6,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@styled-system/css": "^5.1.5",
+    "@types/styled-system__css": "^5.0.16",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
-    "styled-components": "^5.2.3"
+    "styled-components": "^5.2.3",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@types/node": "15.0.0",
