@@ -1,19 +1,19 @@
-import { HeadingElements, Line, HeadingMain, Container } from "./styles";
+import Terminal from "../Terminal";
+import { Container, SmallHeading, LargeHeading, HeadingContainer, Description } from "./styles";
 
 const Heading: React.FC = () => {
   return (
     <Container>
-      <HeadingElements>
-        <Line />
-      </HeadingElements>
-      <HeadingMain>
-        <span>Hi there, I’m Ammar.</span>
-        <br />
-        <span>
-          Full Stack <span className="blue">Developer</span> <br />
-        </span>
-        <span>and Blockchain Enthusiast.</span>
-      </HeadingMain>
+      <HeadingContainer>
+        <SmallHeading>HI, I'M</SmallHeading>
+        <LargeHeading>
+          AMMAR <br /> JUSSA
+        </LargeHeading>
+				<Description>
+					Full Stack Developer and Blockchain Enthusiast
+				</Description>
+      </HeadingContainer>
+      <Terminal />
     </Container>
   );
 };

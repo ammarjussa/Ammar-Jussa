@@ -8,6 +8,7 @@
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@types/styled-system__css": "^5.0.16",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
