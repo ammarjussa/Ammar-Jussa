@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle<{ theme: any }>`
 	body {
 		margin: 0;
 		font-family: arial;
-		// background-color: ${(props) => props.theme.colors.background};
+		background-color: ${({ theme }) => theme.colors.primary};
 	}
 	a {
 		color: inherit;
@@ -15,19 +15,29 @@ const GlobalStyle = createGlobalStyle<{ theme: any }>`
 		box-sizing: border-box;
 	}
 
+	svg {
+		color: ${({ theme }) => theme.colors.secondary};
+	}
+
 	h1 {
 		width: 100%;
     font-weight: 900;
     font-size: 33px;
     line-height: 129.69%;
     letter-spacing: 0.03em;
-    transform: translateY(30px);
+		color: ${({ theme }) => theme.colors.secondary};
     opacity: 1;
+	}
+
+	h3 {
+		font-size: 33px;
+		letter-spacing: 0.03em;
+		color: ${({ theme }) => theme.colors.secondary};
 	}
 
 	p {
 		margin: 50px 0;
-    color: #7b7b7b;
+    color: ${({ theme }) => theme.colors.text};
     width: 100%;
     font-style: normal;
     font-weight: normal;

@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import styled, { keyframes } from "styled-components";
 import Navbar from "../Navbar";
 
@@ -27,10 +28,15 @@ const Body = styled.div`
   padding-top: 3%;
 `;
 
-const Layout: React.FC = ({ children }) => {
+interface Props {
+  children: ReactNode;
+  changeTheme: () => void;
+}
+
+const Layout: React.FC<Props> = ({ children, changeTheme }) => {
   return (
     <LayoutContainer>
-      <Navbar />
+      <Navbar changeTheme={changeTheme} />
       <Body>{children}</Body>
     </LayoutContainer>
   );

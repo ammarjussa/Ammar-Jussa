@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import css from "@styled-system/css";
 
 export const TerminalContainer = styled.div`
   float: center;
   width: 550px;
   height: 350px;
   border-radius: 10px;
-  background-color: #21313c;
   overflow-y: hidden;
   font-family: monospace;
+
+  ${css({
+    bg: "terminal",
+  })}
 `;
 
 export const TerminalTitleBar = styled.div`
@@ -73,4 +77,5 @@ export const Container = styled.div`
 
 export const CodeColor = styled.span`
   color: ${(props) => props.color};
+  font-weight: 600;
 `;

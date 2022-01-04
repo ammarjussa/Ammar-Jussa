@@ -1,13 +1,18 @@
-import styled from "styled-components";
 import Body from "../components/Body";
 import Heading from "../components/Heading";
 import Layout from "../components/Layout";
 
-export default function Home() {
+interface Props {
+  changeTheme: () => void;
+}
+
+const Home: React.FC<Props> = ({ changeTheme }) => {
   return (
-    <Layout>
+    <Layout changeTheme={changeTheme}>
       <Heading />
       <Body />
     </Layout>
   );
-}
+};
+
+export default Home;

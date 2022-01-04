@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 import SunIcon from "../../public/theme-switch.svg";
 
 const Container = styled.div`
@@ -8,7 +9,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const Logo = styled.h2`
+const Logo = styled.h3`
   margin-left: 3%;
   cursor: pointer;
   font-size: 40px;
@@ -30,12 +31,29 @@ const NavContainer = styled.ul`
 const NavOptions = styled.h3`
   font-size: 25px;
   cursor: pointer;
+
+  &:hover {
+    color: gray;
+  }
+
+  ${css({
+    color: "secondary",
+  })}
+`;
+
+const StyledSunIcon = styled(SunIcon)`
+  cursor: pointer;
+
   &:hover {
     color: gray;
   }
 `;
 
-const Navbar = () => {
+interface Props {
+  changeTheme: () => void;
+}
+
+const Navbar: React.FC<Props> = ({ changeTheme }) => {
   return (
     <Container>
       <Logo onClick={() => alert("hello")}>&lt;AJ/&gt;</Logo>
@@ -44,7 +62,7 @@ const Navbar = () => {
         <NavOptions>Skills</NavOptions>
         <NavOptions>Projects</NavOptions>
         <NavOptions>Contact</NavOptions>
-        <SunIcon />
+        <StyledSunIcon onClick={changeTheme} />
       </NavContainer>
     </Container>
   );

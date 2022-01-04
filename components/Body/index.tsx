@@ -16,6 +16,7 @@ const Container = styled.div`
 const BodyTitle = styled.h1`
   text-align: center;
   font-size: 50px;
+  margin-top: 5%;
 `;
 
 const TextContent = styled.div`
@@ -44,7 +45,6 @@ const Body: React.FC = () => {
         <p>{Texts.text1}</p>
         <p>{Texts.text2}</p>
       </TextContent>
-
     </Container>
   );
 };

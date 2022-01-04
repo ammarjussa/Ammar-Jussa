@@ -18,7 +18,12 @@ export const lightTheme = {
   breakpoints,
   fontSizes,
   lineHeights,
-  colors: {},
+  colors: {
+    primary: "#fff",
+    secondary: "#000",
+    text: "#7b7b7b",
+    terminal: "#21313c",
+  },
 };
 
 export const darkTheme = {
@@ -26,5 +31,10 @@ export const darkTheme = {
   breakpoints,
   fontSizes,
   lineHeights,
-  colors: {},
+  colors: {
+    primary: "#124",
+    secondary: "#fff",
+    text: "#f8f8f8",
+    terminal: "#f4f5ff",
+  },
 };
