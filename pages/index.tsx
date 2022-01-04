@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout>
       <Heading />
-      {/* <Body /> */}
+      <Body />
     </Layout>
   );
 }

@@ -56,7 +56,7 @@ export const TerminalBody = styled.div`
   color: #adb5b9;
   line-height: 1.1;
 
-  a {
+  .link {
     color: #74eb70;
 
     &:hover {

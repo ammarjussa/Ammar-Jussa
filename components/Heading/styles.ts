@@ -34,5 +34,5 @@ export const LargeHeading = styled.h1`
 `;
 
 export const Description = styled.h1`
-  font-size: 30px;
+  font-size: 25px;
 `;

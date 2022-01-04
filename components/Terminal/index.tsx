@@ -31,7 +31,7 @@ const Terminal = () => {
             </CodeColor>:{" "}
             <CodeColor>
               '
-              <a target="_blank" href="https://github.com/ammarjussa">
+              <a className="link" target="_blank" href="https://github.com/ammarjussa">
                 https://github.com/ammarjussa
               </a>
               '

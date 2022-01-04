@@ -1,5 +1,11 @@
 import Terminal from "../Terminal";
-import { Container, SmallHeading, LargeHeading, HeadingContainer, Description } from "./styles";
+import {
+  Container,
+  SmallHeading,
+  LargeHeading,
+  HeadingContainer,
+  Description,
+} from "./styles";
 
 const Heading: React.FC = () => {
   return (
@@ -9,9 +15,9 @@ const Heading: React.FC = () => {
         <LargeHeading>
           AMMAR <br /> JUSSA
         </LargeHeading>
-				<Description>
-					Full Stack Developer and Blockchain Enthusiast
-				</Description>
+        <Description>
+          FULL STACK DEVELOPER AND BLOCKCHAIN ENTHUSIAST
+        </Description>
       </HeadingContainer>
       <Terminal />
     </Container>
