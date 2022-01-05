@@ -15,10 +15,6 @@ const GlobalStyle = createGlobalStyle<{ theme: any }>`
 		box-sizing: border-box;
 	}
 
-	svg {
-		color: ${({ theme }) => theme.colors.secondary};
-	}
-
 	h1 {
 		width: 100%;
     font-weight: 900;

@@ -29,14 +29,15 @@ const Body = styled.div`
 `;
 
 interface Props {
+  theme: any;
   children: ReactNode;
   changeTheme: () => void;
 }
 
-const Layout: React.FC<Props> = ({ children, changeTheme }) => {
+const Layout: React.FC<Props> = ({ theme, children, changeTheme }) => {
   return (
     <LayoutContainer>
-      <Navbar changeTheme={changeTheme} />
+      <Navbar theme={theme} changeTheme={changeTheme} />
       <Body>{children}</Body>
     </LayoutContainer>
   );

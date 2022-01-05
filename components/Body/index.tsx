@@ -10,7 +10,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0;
-  justify-content: space-between;
 `;
 
 const BodyTitle = styled.h1`

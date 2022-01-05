@@ -1,12 +1,17 @@
 import styled from "styled-components";
-import { css } from "styled-components";
+import { LIGHT_THEME } from "../../constants";
 import SunIcon from "../../public/theme-switch.svg";
 
 const Container = styled.div`
-  height: 100px;
+  height: 80px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: ${({ theme }) => (theme == LIGHT_THEME ? "#fff" : "#124")};
 `;
 
 const Logo = styled.h3`
@@ -35,14 +40,11 @@ const NavOptions = styled.h3`
   &:hover {
     color: gray;
   }
-
-  ${css({
-    color: "secondary",
-  })}
 `;
 
 const StyledSunIcon = styled(SunIcon)`
   cursor: pointer;
+  color: ${({ theme }) => (theme == LIGHT_THEME ? "#000" : "#fff")};
 
   &:hover {
     color: gray;
@@ -50,19 +52,20 @@ const StyledSunIcon = styled(SunIcon)`
 `;
 
 interface Props {
+  theme: any;
   changeTheme: () => void;
 }
 
-const Navbar: React.FC<Props> = ({ changeTheme }) => {
+const Navbar: React.FC<Props> = ({ theme, changeTheme }) => {
   return (
-    <Container>
+    <Container theme={theme}>
       <Logo onClick={() => alert("hello")}>&lt;AJ/&gt;</Logo>
       <NavContainer>
         <NavOptions>About</NavOptions>
         <NavOptions>Skills</NavOptions>
         <NavOptions>Projects</NavOptions>
         <NavOptions>Contact</NavOptions>
-        <StyledSunIcon onClick={changeTheme} />
+        <StyledSunIcon theme={theme} onClick={changeTheme} />
       </NavContainer>
     </Container>
   );
