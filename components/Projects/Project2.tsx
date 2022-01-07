@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const Container = styled.div`
   display: flex;
@@ -6,6 +8,8 @@ const Container = styled.div`
   align-items: center;
   padding-left: 15%;
   padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 `;
 
 const ImageContainer = styled.div`
@@ -16,6 +20,12 @@ const ImageContainer = styled.div`
 
 const ProjectTitle = styled.h1`
   text-align: center;
+  font-size: 40px;
+`;
+
+const DescriptionHeader = styled.h1`
+  text-align: center;
+  font-size: 30px;
 `;
 
 const ProjectText = styled.p`
@@ -24,29 +34,40 @@ const ProjectText = styled.p`
 
 const ProjectImage = styled.img`
   width: 25vw;
-  padding-top: 20%;
 `;
 
 const ProjectImage2 = styled.img`
   width: 10vw;
+  padding-top: 40%;
 `;
 
 const Project2 = () => {
   return (
     <div>
-      <ProjectTitle>Project 1</ProjectTitle>
+      <LightSpeed right>
+        <ProjectTitle>Project 1</ProjectTitle>
+      </LightSpeed>
       <Container>
-        <ProjectText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint
-        </ProjectText>
+        <Fade left>
+          <div>
+            <DescriptionHeader>A portfolio managing app</DescriptionHeader>
+            <ProjectText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint
+            </ProjectText>
+          </div>
+        </Fade>
         <ImageContainer>
-          <ProjectImage2 src="/amazon_phone.png" />
-          <ProjectImage src="/amazon_web.png" />
+          <Fade right>
+            <ProjectImage src="/amazon_web.png" />
+          </Fade>
+          <Fade top>
+            <ProjectImage2 src="/amazon_phone.png" />
+          </Fade>
         </ImageContainer>
       </Container>
     </div>

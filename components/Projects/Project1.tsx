@@ -8,6 +8,8 @@ const Container = styled.div`
   align-items: center;
   padding-left: 15%;
   padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 `;
 
 const ImageContainer = styled.div`
@@ -18,6 +20,12 @@ const ImageContainer = styled.div`
 
 const ProjectTitle = styled.h1`
   text-align: center;
+  font-size: 40px;
+`;
+
+const DescriptionHeader = styled.h1`
+  text-align: center;
+  font-size: 30px;
 `;
 
 const ProjectText = styled.p`
@@ -30,8 +38,12 @@ const ProjectImage = styled.img`
 
 const ProjectImage2 = styled.img`
   width: 10vw;
-  padding-top: 20%;
+  padding-top: 40%;
 `;
+
+// const StyledReact = styled(IconReact)`
+
+// `
 
 const Project1 = () => {
   return (
@@ -50,14 +62,17 @@ const Project1 = () => {
           </Fade>
         </ImageContainer>
         <Fade right>
-          <ProjectText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint
-          </ProjectText>
+          <div>
+            <DescriptionHeader>A portfolio managing app</DescriptionHeader>
+            <ProjectText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint
+            </ProjectText>
+          </div>
         </Fade>
       </Container>
     </div>
