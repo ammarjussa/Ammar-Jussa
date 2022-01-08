@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Texts from "./bodyText.json";
+import css from "@styled-system/css";
 
 const Container = styled.div`
   padding-top: 10%;
@@ -14,8 +15,10 @@ const Container = styled.div`
 
 const BodyTitle = styled.h1`
   text-align: center;
-  font-size: 50px;
-  margin-top: 5%;
+  ${css({
+    fontSize: ["35px", null, null, "50px"],
+    mt: ["10%", null, null, "5%"],
+  })}
 `;
 
 const TextContent = styled.div`
@@ -29,10 +32,13 @@ const TextContent = styled.div`
 `;
 
 const MyImage = styled.img`
-  width: 80vw;
   height: 20%;
   border-radius: 3%;
   box-shadow: 5px 5px 5px;
+
+  ${css({
+    width: ["95vw", null, null, "80vw"],
+  })}
 `;
 
 const Body: React.FC = () => {

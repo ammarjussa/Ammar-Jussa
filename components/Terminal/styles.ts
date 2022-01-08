@@ -3,7 +3,6 @@ import css from "@styled-system/css";
 
 export const TerminalContainer = styled.div`
   float: center;
-  width: 550px;
   height: 350px;
   border-radius: 10px;
   overflow-y: hidden;
@@ -11,6 +10,8 @@ export const TerminalContainer = styled.div`
 
   ${css({
     bg: "terminal",
+    width: ["90vw", null, null, null, null,"28vw"],
+    height: ["450px", null, null, null, null, "350px"],
   })}
 `;
 

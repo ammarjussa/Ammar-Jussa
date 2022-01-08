@@ -49,6 +49,10 @@ const GlobalStyle = createGlobalStyle<{ theme: any }>`
     }
 		opacity: 1;
 
+		@media(max-width: 500px) {
+			font-size:15px;
+		}
+
 	}
 `;
 

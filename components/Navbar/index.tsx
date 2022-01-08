@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { LIGHT_THEME } from "../../constants";
 import SunIcon from "../../public/theme-switch.svg";
+import css from "@styled-system/css";
 
 const Container = styled.div`
   height: 80px;
@@ -17,12 +18,15 @@ const Container = styled.div`
 const Logo = styled.h3`
   margin-left: 3%;
   cursor: pointer;
-  font-size: 40px;
   max-width: 6%;
 
   &:hover {
     color: gray;
   }
+
+  ${css({
+    fontSize: ["30px", null, null, "40px"],
+  })}
 `;
 
 const NavContainer = styled.ul`
@@ -34,12 +38,15 @@ const NavContainer = styled.ul`
 `;
 
 const NavOptions = styled.h3`
-  font-size: 25px;
   cursor: pointer;
 
   &:hover {
     color: gray;
   }
+
+  ${css({
+    fontSize: ["5px", null, null, "25px"],
+  })}
 `;
 
 const StyledSunIcon = styled(SunIcon)`
