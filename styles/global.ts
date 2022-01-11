@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle<{ theme: any }>`
     width: 100%;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 184.69%;
     letter-spacing: 0.03em;
     a {

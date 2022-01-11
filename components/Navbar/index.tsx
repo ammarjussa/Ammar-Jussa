@@ -45,7 +45,7 @@ const NavOptions = styled.h3`
   }
 
   ${css({
-    fontSize: ["5px", null, null, "25px"],
+    fontSize: ["5px", null, null, "20px"],
   })}
 `;
 
