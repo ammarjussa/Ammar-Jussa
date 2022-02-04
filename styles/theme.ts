@@ -21,8 +21,10 @@ export const lightTheme = {
   colors: {
     primary: "#fff",
     secondary: "#000",
+    button: "#124",
     text: "#7b7b7b",
     terminal: "#21313c",
+    buttonText: "#fff",
   },
 };
 
@@ -34,7 +36,9 @@ export const darkTheme = {
   colors: {
     primary: "#124",
     secondary: "#fff",
+    button: "#fff",
     text: "#f8f8f8",
     terminal: "#f4f5ff",
+    buttonText: "#000",
   },
 };

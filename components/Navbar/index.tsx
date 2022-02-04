@@ -101,6 +101,8 @@ const NavOptions = styled.li`
 const StyledSunIcon = styled(SunIcon)`
   cursor: pointer;
   color: ${({ theme }) => (theme == LIGHT_THEME ? "#000" : "#fff")};
+  width: 25px;
+  height: 25px;
 
   &:hover {
     color: gray;

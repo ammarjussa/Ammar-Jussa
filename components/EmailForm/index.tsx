@@ -20,12 +20,82 @@ const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 10%;
+  width: 50vw;
+`;
+
+const StyledText = styled.p`
+  margin: 0;
 `;
 
 const SocialMediaContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 20px;
+`;
+
+const SocialLinks = styled.a`
+  margin-right: 10px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin-right: 10%;
+`;
+
+const StyledInput = styled.input`
+  display: flex;
+  ${css({
+    paddingLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginBottom: 20,
+  })}
+
+  &:focus {
+    outline: none !important;
+    border: 1px solid green;
+    box-shadow: 0 0 4px green;
+  }
+`;
+
+const StyledArea = styled.textarea`
+  min-height: 100px;
+  ${css({
+    paddingLeft: 10,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginBottom: 20,
+  })}
+
+  &:focus {
+    outline: none !important;
+    border: 1px solid green;
+    box-shadow: 0 0 4px green;
+  }
+`;
+
+const StyledSubmit = styled.input`
+  border: 1px solid lightgray;
+  transition: 0.5s;
+  background-color: ${({ theme }) => theme.colors.button};
+  color: ${({ theme }) => theme.colors.buttonText};
+  cursor: pointer;
+  ${css({
+    paddingTop: 8,
+    paddingBottom: 8,
+  })};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
+  }
 `;
 
 const ContactUs = () => {
@@ -62,48 +132,52 @@ const ContactUs = () => {
   return (
     <ContactContainer>
       <DescriptionContainer>
-        <h1>Contact</h1>
-        <p>Get in Touch</p>
-        <p>Email: ammar26497@gmail.com</p>
+        <div>
+          <h1>CONTACT</h1>
+          <br />
+
+          <StyledText>
+            <b>Get in touch.</b>
+          </StyledText>
+          <StyledText>Email: ammar26497@gmail.com</StyledText>
+        </div>
         <SocialMediaContainer>
           <div>
-            <a
+            <SocialLinks
               href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
               target="_blank"
             >
               <img src="/linkedin.svg" height="50px" width="50px" />
-            </a>
+            </SocialLinks>
 
-            <a href="https://github.com/ammarjussa/" target="_blank">
+            <SocialLinks href="https://github.com/ammarjussa/" target="_blank">
               <img src="/github.png" height="50px" width="50px" />
-            </a>
+            </SocialLinks>
           </div>
         </SocialMediaContainer>
       </DescriptionContainer>
 
-      <div>
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <label>Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label>Message</label>
-          <textarea
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <input type="submit" value="Send" />
-        </form>
-      </div>
+      <FormContainer ref={form} onSubmit={sendEmail}>
+        <StyledInput
+          type="text"
+          value={name}
+          placeholder="Name"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <StyledInput
+          type="email"
+          value={email}
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <StyledArea
+          name="message"
+          value={message}
+          placeholder="Message"
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <StyledSubmit type="submit" value="Send" />
+      </FormContainer>
     </ContactContainer>
   );
 };
