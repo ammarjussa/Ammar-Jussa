@@ -1,26 +1,34 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
-import { css } from "styled-components";
+import css from "@styled-system/css";
 
 import { init } from "@emailjs/browser";
 init(process.env.NEXT_PUBLIC_USER_ID as string);
 
 const ContactContainer = styled.div`
   width: 85vw;
-  height: 80vh;
+  min-height: 80vh;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   align-self: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  ${css({
+    flexDirection: ["column", null, null, "row"],
+    justifyContent: ["center", null, null, "space-around"],
+    my: ["20%", null, null, "0px"],
+  })}
 `;
 
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
   width: 50vw;
+
+  ${css({
+    ml: ["0px", null, null, "10%"],
+    mt: ["20%", null, null, "0px"],
+  })}
 `;
 
 const StyledText = styled.p`
@@ -45,17 +53,19 @@ const SocialLinks = styled.a`
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  width: 50vw;
-  margin-right: 10%;
+  ${css({
+    mr: ["0px", null, null, "10%"],
+    my: ["20%", null, null, "0px"],
+    width: ["70vw", null, null, "50vw"],
+  })}
 `;
 
 const StyledInput = styled.input`
   display: flex;
   ${css({
-    paddingLeft: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginBottom: 20,
+    pl: "10px",
+    py: "10px",
+    marginBottom: "20px",
   })}
 
   &:focus {
@@ -66,12 +76,11 @@ const StyledInput = styled.input`
 `;
 
 const StyledArea = styled.textarea`
-  min-height: 100px;
+  min-height: 150px;
   ${css({
-    paddingLeft: 10,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginBottom: 20,
+    pl: "10px",
+    py: "15px",
+    marginBottom: "20px",
   })}
 
   &:focus {
@@ -88,8 +97,7 @@ const StyledSubmit = styled.input`
   color: ${({ theme }) => theme.colors.buttonText};
   cursor: pointer;
   ${css({
-    paddingTop: 8,
-    paddingBottom: 8,
+    py: "10px",
   })};
 
   &:hover {
@@ -106,27 +114,32 @@ const ContactUs = () => {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-    const body = {
-      from_name: name,
-      to_name: "Ammar Jussa",
-      message,
-      email,
-    };
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
-        body,
-        process.env.NEXT_PUBLIC_USER_ID as string
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+
+    if (name.trim() !== "" && email.trim() !== "" && message.trim() !== "") {
+      const body = {
+        from_name: name,
+        to_name: "Ammar Jussa",
+        message,
+        email,
+      };
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+          body,
+          process.env.NEXT_PUBLIC_USER_ID as string
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else {
+      alert("Please fill the form completely");
+    }
   };
 
   return (

@@ -22,6 +22,7 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 7%;
 `;
 
 const ProjectTitle = styled.h1`
@@ -35,6 +36,8 @@ const DescriptionHeader = styled.h1`
 `;
 
 const ProjectText = styled.p`
+  text-align: center;
+
   ${css({
     width: ["80vw", null, null, null, null, "30vw"],
   })}
