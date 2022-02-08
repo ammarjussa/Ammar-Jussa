@@ -17,6 +17,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   animation: ${Float} 1s 0.2s forwards;
+	margin-top: 5%;
 
   ${css({
     flexDirection: ["column", null, null, null, null, "row"],

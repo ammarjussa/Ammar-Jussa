@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Texts from "./bodyText.json";
 import css from "@styled-system/css";
+import Skills from "../Skills";
 
 const Container = styled.div`
   padding-top: 10%;
@@ -23,7 +24,9 @@ const BodyTitle = styled.h1`
 
 const TextContent = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   max-width: 80vw;
 
   p {
@@ -50,6 +53,7 @@ const Body: React.FC = () => {
         <p>{Texts.text1}</p>
         <p>{Texts.text2}</p>
       </TextContent>
+      <Skills />
     </Container>
   );
 };

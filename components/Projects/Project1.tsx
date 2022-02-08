@@ -55,37 +55,30 @@ const ProjectImage2 = styled.img`
   })}
 `;
 
-// const StyledReact = styled(IconReact)`
+interface Props {
+  project: any;
+}
 
-// `
-
-const Project1 = () => {
+const Project1: React.FC<Props> = ({ project }) => {
   return (
     <div>
       <LightSpeed left>
-        <ProjectTitle>Project 1</ProjectTitle>
+        <ProjectTitle>{project?.heading}</ProjectTitle>
       </LightSpeed>
 
       <Container>
         <ImageContainer>
           <Fade left>
-            <ProjectImage src="/amazon_web.png" />
+            <ProjectImage src={project?.web} />
           </Fade>
           <Fade top>
-            <ProjectImage2 src="/amazon_phone.png" />
+            <ProjectImage2 src={project?.phone} />
           </Fade>
         </ImageContainer>
         <Fade right>
           <div>
-            <DescriptionHeader>A portfolio managing app</DescriptionHeader>
-            <ProjectText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint
-            </ProjectText>
+            <DescriptionHeader>{project?.subHeading}</DescriptionHeader>
+            <ProjectText>{project?.description}</ProjectText>
           </div>
         </Fade>
       </Container>

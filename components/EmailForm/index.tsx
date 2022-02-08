@@ -13,7 +13,9 @@ const ContactContainer = styled.div`
   align-self: center;
   display: flex;
   align-items: center;
+  transition: 0.5s;
   ${css({
+    bg: "form",
     flexDirection: ["column", null, null, "row"],
     justifyContent: ["center", null, null, "space-around"],
     my: ["20%", null, null, "0px"],

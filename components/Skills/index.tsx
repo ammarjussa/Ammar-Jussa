@@ -1,84 +1,114 @@
 import styled from "styled-components";
+import css from "@styled-system/css";
 
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5%;
-
-  @media screen and (max-width: 2000px) {
-    div {
-      flex-basis: 16%;
-    }
-
-		@media screen and (max-width: 1000px) {
-    div {
-      flex-basis: 33%;
-    }
-
-    @media screen and (max-width: 600px) {
-      div {
-        flex-basis: 50%;
-      }
-    }
-
-  }
-`;
-
-const Card = styled.div`
-  padding: 5%;
-  background-color: ${(props) => props.color || "lightgray"};
+  margin: 0;
+  width: 90%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  ${css({
+    flexWrap: ["nowrap", null, "wrap"],
+  })}
 `;
 
-const Text = styled.p`
+const BodyTitle = styled.h1`
   text-align: center;
-  font-size: 30px;
-  font-weight: 900;
-  color: ${(props) => props.color || "white"}; ;
+  ${css({
+    fontSize: ["35px", null, null, "50px"],
+    mt: ["10%", null, null, "5%"],
+  })}
+`;
+
+const SkillTable = styled.div`
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  ${css({
+    width: ["60%", null, "45%", "100%"],
+  })}
+`;
+
+const SkillContent = styled.div`
+  font-weight: 700;
+  min-width: 200px;
+  margin: 20px 0 0 0;
+  @media (min-width: 200px) {
+    min-width: unset;
+    margin: 30px 0;
+  }
+  span {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #b4cde7;
+  }
+  ${css({
+    color: "secondary",
+  })}
+`;
+
+const SubContainer = styled.div`
+  margin: 0px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const TextContent = styled.div`
+  width: 100%;
 `;
 
 const Skills = () => {
   return (
     <Container>
-      <Card color="#223">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#778">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#f8f9fa">
-        <Text color="black">HTML</Text>
-      </Card>
-      <Card color="#fff">
-        <Text color="black">HTML</Text>
-      </Card>
-      <Card color="#778">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#223">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#f8f9fa">
-        <Text color="black">HTML</Text>
-      </Card>
-      <Card color="#223">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#778">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#f8f9fa">
-        <Text color="black">HTML</Text>
-      </Card>
-      <Card color="#223">
-        <Text>HTML</Text>
-      </Card>
-      <Card color="#fff">
-        <Text color="black">HTML</Text>
-      </Card>
+      <SubContainer>
+        <TextContent>
+          <BodyTitle>My Skills</BodyTitle>
+          <p>
+            Through my studies, I've gained a solid understanding of computer
+            science and web development concepts, and have dedicated a lot of my
+            free time to apply these concepts to real-world scenarios and
+            applications.
+          </p>
+        </TextContent>
+        <SkillTable>
+          <row>
+            <SkillContent>
+              <span>&#9675;</span> Javascript ES6
+            </SkillContent>
+            <SkillContent>
+              <span>&#9675;</span> HTML & CSS
+            </SkillContent>
+          </row>
+          <row>
+            <SkillContent>
+              <span>&#9675;</span> React
+            </SkillContent>
+            <SkillContent>
+              <span>&#9675;</span> SASS
+            </SkillContent>
+          </row>
+          <row>
+            <SkillContent>
+              <span>&#9675;</span> React Native
+            </SkillContent>
+            <SkillContent>
+              <span>&#9675;</span> Styled-Components
+            </SkillContent>
+          </row>
+          <row>
+            <SkillContent>
+              <span>&#9675;</span> Git
+            </SkillContent>
+            <SkillContent>
+              <span>&#9675;</span> PHP & SQL
+            </SkillContent>
+          </row>
+        </SkillTable>
+      </SubContainer>
     </Container>
   );
 };

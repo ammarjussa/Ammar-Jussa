@@ -25,6 +25,7 @@ export const lightTheme = {
     text: "#7b7b7b",
     terminal: "#21313c",
     buttonText: "#fff",
+    form: "#fff",
   },
 };
 
@@ -40,5 +41,6 @@ export const darkTheme = {
     text: "#f8f8f8",
     terminal: "#f4f5ff",
     buttonText: "#000",
+    form: "#16213a",
   },
 };

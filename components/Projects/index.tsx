@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Project1 from "./Project1";
 import Project2 from "./Project2";
+import { Tefi, Amazon, SmartSchool } from "./ProjectsList";
 
 const Container = styled.div`
   padding-top: 3%;
@@ -17,10 +18,10 @@ const Projects: React.FC = () => {
     <>
       <BodyTitle>View My Work</BodyTitle>
       <Container>
-        <Project1 />
-        <Project2 />
-        <Project1 />
-        <Project2 />
+        <Project1 project={Tefi} />
+        <Project2 project={Amazon} />
+        <Project1 project={Tefi} />
+        <Project2 project={SmartSchool} />
       </Container>
     </>
   );

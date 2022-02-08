@@ -10,7 +10,7 @@ const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   overflow-y: hidden;
   top: 0;
   z-index: 10;
@@ -136,7 +136,6 @@ interface Props {
 
 const Navbar: React.FC<Props> = ({ theme, changeTheme }) => {
   const [open, setOpen] = useState<boolean>(false);
-  console.log(theme);
 
   return (
     <Container theme={theme}>

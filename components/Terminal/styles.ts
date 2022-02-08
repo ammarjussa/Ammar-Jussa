@@ -7,6 +7,7 @@ export const TerminalContainer = styled.div`
   border-radius: 10px;
   overflow-y: hidden;
   font-family: monospace;
+  transition: 0.5s;
 
   ${css({
     bg: "terminal",

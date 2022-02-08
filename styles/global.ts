@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle<{ theme: any }>`
 	body {
 		max-width: 100%;
     overflow-x: hidden;
+		transition: 0.5s;
 		margin: 0;
 		font-family: arial;
 		background-color: ${({ theme }) => theme.colors.primary};
