@@ -34,10 +34,10 @@ const TextContent = styled.div`
 const MyImage = styled.img`
   height: 20%;
   border-radius: 3%;
-  box-shadow: 5px 5px 5px;
+  box-shadow: 5px 5px 2px;
 
   ${css({
-    width: ["95vw", null, null, "80vw"],
+    width: ["90vw", null, null, "80vw"],
   })}
 `;
 

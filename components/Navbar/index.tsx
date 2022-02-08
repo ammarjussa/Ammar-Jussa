@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { LIGHT_THEME } from "../../constants";
 import SunIcon from "../../public/theme-switch.svg";
@@ -42,11 +43,12 @@ const NavContainer = styled.nav`
   @media only screen and (max-width: 900px) {
     position: absolute;
     top: 60px;
-    left: -150%;
+    left: ${(props: { open: boolean }) => (props.open ? "0%" : "-150%")};
     z-index: 10;
     width: 100vw;
     height: 55%;
-    background-color: #4169e1;
+    background-color: ${({ theme }) =>
+      theme === LIGHT_THEME ? "#f5f5f5" : "#000"};
   }
 `;
 
@@ -100,7 +102,7 @@ const NavOptions = styled.li`
 
 const StyledSunIcon = styled(SunIcon)`
   cursor: pointer;
-  color: ${({ theme }) => (theme == LIGHT_THEME ? "#000" : "#fff")};
+  color: ${({ theme }) => (theme == LIGHT_THEME ? "#000" : "#fff")} !important;
   width: 25px;
   height: 25px;
 
@@ -120,9 +122,9 @@ const Hamburger = styled.div`
 `;
 
 const Line = styled.div`
-  width: 40px;
-  height: 5px;
-  background: #000;
+  width: 30px;
+  height: 3px;
+  background-color: ${({ theme }) => (theme === LIGHT_THEME ? "#000" : "#fff")};
   margin-bottom: 5px;
   border-radius: 5px;
 `;
@@ -133,11 +135,13 @@ interface Props {
 }
 
 const Navbar: React.FC<Props> = ({ theme, changeTheme }) => {
+  const [open, setOpen] = useState<boolean>(false);
   console.log(theme);
+
   return (
     <Container theme={theme}>
       <Logo onClick={() => alert("hello")}>&lt;AJ/&gt;</Logo>
-      <NavContainer>
+      <NavContainer theme={theme} open={open}>
         <Nav>
           <NavOptions theme={theme}>
             <a href="#home1">Home</a>
@@ -160,10 +164,10 @@ const Navbar: React.FC<Props> = ({ theme, changeTheme }) => {
           </NavOptions>
         </Nav>
       </NavContainer>
-      <Hamburger>
-        <Line />
-        <Line />
-        <Line />
+      <Hamburger onClick={() => setOpen(!open)}>
+        <Line theme={theme} />
+        <Line theme={theme} />
+        <Line theme={theme} />
       </Hamburger>
     </Container>
   );
