@@ -20,7 +20,7 @@ export const Container = styled.div`
 	margin-top: 5%;
 
   ${css({
-    flexDirection: ["column", null, null, null, null, "row"],
+    flexDirection: ["column", null, null, null, "row"],
     justifyContent: ["center", null, null, null, null, "space-between"],
   })}
 `;
