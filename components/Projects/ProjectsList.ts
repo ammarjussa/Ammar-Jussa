@@ -5,6 +5,7 @@ export const Tefi = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint",
   web: "/tefi-web.png",
   phone: "/tefi-phone.png",
+  tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
 };
 
 export const SmartSchool = {
@@ -14,6 +15,7 @@ export const SmartSchool = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint",
   web: "/school-web.png",
   phone: "/school-phone.png",
+  tools: ["React", "NodeJS", "MongoDB"],
 };
 
 export const Amazon = {
@@ -23,6 +25,7 @@ export const Amazon = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint",
   web: "/amazon-web.png",
   phone: "/amazon-phone.png",
+  tools: ["React", "NodeJS", "Firebase"],
 };
 
 export const Portfolio = {};

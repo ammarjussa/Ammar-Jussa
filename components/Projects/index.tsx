@@ -13,15 +13,19 @@ const BodyTitle = styled.h1`
   margin-top: 5%;
 `;
 
-const Projects: React.FC = () => {
+interface Props {
+  theme: string;
+}
+
+const Projects: React.FC<Props> = ({ theme }) => {
   return (
     <>
       <BodyTitle>View My Work</BodyTitle>
       <Container>
-        <Project1 project={Tefi} />
-        <Project2 project={Amazon} />
-        <Project1 project={Tefi} />
-        <Project2 project={SmartSchool} />
+        <Project1 theme={theme} project={Tefi} />
+        <Project2 theme={theme} project={Amazon} />
+        <Project1 theme={theme} project={Tefi} />
+        <Project2 theme={theme} project={SmartSchool} />
       </Container>
     </>
   );

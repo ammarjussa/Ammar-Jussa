@@ -14,7 +14,7 @@ const Home: React.FC<Props> = ({ theme, changeTheme }) => {
     <Layout theme={theme} changeTheme={changeTheme}>
       <Heading />
       <Body />
-      <Projects />
+      <Projects theme={theme} />
       <ContactUs />
     </Layout>
   );

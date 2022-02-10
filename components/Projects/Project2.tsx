@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import LightSpeed from "react-reveal/LightSpeed";
 import css from "@styled-system/css";
+import TechIcons from "./TechIcons";
 
 const Container = styled.div`
   display: flex;
@@ -12,6 +13,15 @@ const Container = styled.div`
     flexDirection: ["column", null, null, null, null, "row"],
     justifyContent: ["center", null, null, null, null, "space-around"],
     pb: ["30%", null, null, null, null, "15%"],
+  })}
+`;
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${css({
+    pb: ["30%", null, null, null, null, "0px"],
   })}
 `;
 
@@ -58,9 +68,10 @@ const ProjectImage2 = styled.img`
 
 interface Props {
   project: any;
+  theme: string;
 }
 
-const Project2: React.FC<Props> = ({ project }) => {
+const Project2: React.FC<Props> = ({ project, theme }) => {
   return (
     <div>
       <LightSpeed right>
@@ -68,10 +79,11 @@ const Project2: React.FC<Props> = ({ project }) => {
       </LightSpeed>
       <Container>
         <Fade left>
-          <div>
+          <Box>
             <DescriptionHeader>{project?.subHeading}</DescriptionHeader>
             <ProjectText>{project?.description}</ProjectText>
-          </div>
+            <TechIcons tech={project.tools} theme={theme} />
+          </Box>
         </Fade>
         <ImageContainer>
           <Fade right>
