@@ -11,8 +11,20 @@ export const TerminalContainer = styled.div`
 
   ${css({
     bg: "terminal",
-    width: ["90vw", null, null, '420px', null, null, null, "450px", null,"520px"],
+    width: [
+      "90vw",
+      null,
+      null,
+      "420px",
+      null,
+      null,
+      null,
+      "450px",
+      null,
+      "520px",
+    ],
     height: ["280px", null, "350px"],
+    mb: ["10%", null, null, null, null, 0],
   })}
 `;
 

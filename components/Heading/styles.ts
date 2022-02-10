@@ -17,7 +17,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   animation: ${Float} 1s 0.2s forwards;
-	margin-top: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
   ${css({
     flexDirection: ["column", null, null, null, "row"],
@@ -49,5 +50,6 @@ export const LargeHeading = styled.h1`
 export const Description = styled.h1`
   ${css({
     fontSize: ["20px", null, null, null, null, "25px"],
+    mb: ["10%", null, null, null, null, 0],
   })}
 `;

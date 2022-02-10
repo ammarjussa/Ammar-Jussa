@@ -31,12 +31,9 @@ const Logo = styled.h3`
   }
 
   ${css({
-    fontSize: ["20px", null, null, "30px"],
+    mt: ["30px", null, "50px"],
+    fontSize: ["30px", null, "40px"],
   })}
-
-  @media only screen and (max-width: 900px) {
-    margin-top: 10px;
-  }
 `;
 
 const NavContainer = styled.nav`
@@ -46,10 +43,13 @@ const NavContainer = styled.nav`
     left: ${(props: { open: boolean }) => (props.open ? "0%" : "-150%")};
     z-index: 10;
     width: 100vw;
-    height: 55%;
     background-color: ${({ theme }) =>
       theme === LIGHT_THEME ? "#f5f5f5" : "#000"};
   }
+
+  ${css({
+    fontSize: ["20px", null, null, "30px"],
+  })}
 `;
 
 const Nav = styled.ul`

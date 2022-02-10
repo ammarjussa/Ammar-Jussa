@@ -5,16 +5,13 @@ import css from "@styled-system/css";
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-left: 15%;
-  padding-right: 15%;
   padding-top: 5%;
-  padding-bottom: 10%;
 
   ${css({
     flexDirection: ["column", null, null, null, null, "row"],
     justifyContent: ["center", null, null, null, null, "space-around"],
+    pb: ["30%", null, null, null, null, "15%"],
   })}
 `;
 
@@ -22,7 +19,9 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 10%;
+  ${css({
+    mr: [0, null, null, null, null, "10%"],
+  })}
 `;
 
 const ProjectTitle = styled.h1`
@@ -38,20 +37,22 @@ const DescriptionHeader = styled.h1`
 const ProjectText = styled.p`
   text-align: center;
   ${css({
-    width: ["80vw", null, null, null, null, "30vw"],
+    width: ["90vw", null, null, null, null, "30vw"],
   })}
 `;
 
 const ProjectImage = styled.img`
+  align-self: center;
   ${css({
-    width: ["80vw", null, null, null, null, "25vw"],
+    width: ["70vw", null, null, null, null, "35vw", null, null, "25vw"],
   })}
 `;
 
 const ProjectImage2 = styled.img`
   padding-top: 40%;
   ${css({
-    width: ["50vw", null, null, null, null, "10vw"],
+    width: ["30vw", null, null, null, null, "15vw", null, null, "10vw"],
+    mb: ["20%", null, null, null, null, 0],
   })}
 `;
 
