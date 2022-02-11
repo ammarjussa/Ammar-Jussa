@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
 import ContactUs from "../components/EmailForm";
+import Footer from "../components/Footer";
 
 interface Props {
   theme: any;
@@ -14,8 +15,13 @@ const Home: React.FC<Props> = ({ theme, changeTheme }) => {
     <Layout theme={theme} changeTheme={changeTheme}>
       <Heading />
       <Body />
-      <Projects theme={theme} />
-      <ContactUs />
+      <div id="projects">
+        <Projects theme={theme} />
+      </div>
+      <div id="contact">
+        <ContactUs />
+      </div>
+      <Footer />
     </Layout>
   );
 };

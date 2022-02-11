@@ -47,13 +47,17 @@ const MyImage = styled.img`
 const Body: React.FC = () => {
   return (
     <Container>
-      <MyImage src="/ammarjussa.png" />
-      <BodyTitle>About Me</BodyTitle>
-      <TextContent>
-        <p>{Texts.text1}</p>
-        <p>{Texts.text2}</p>
-      </TextContent>
-      <Skills />
+      <div id="about">
+        <MyImage src="/ammarjussa.png" />
+        <BodyTitle>About Me</BodyTitle>
+        <TextContent>
+          <p>{Texts.text1}</p>
+          <p>{Texts.text2}</p>
+        </TextContent>
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
     </Container>
   );
 };

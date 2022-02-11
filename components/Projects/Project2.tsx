@@ -46,9 +46,12 @@ const DescriptionHeader = styled.h1`
 
 const ProjectText = styled.p`
   text-align: center;
+  margin: 0;
 
   ${css({
     width: ["90vw", null, null, null, null, "30vw"],
+    mt: ["20px"],
+    mb: ["50px"],
   })}
 `;
 

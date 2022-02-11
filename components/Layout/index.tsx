@@ -26,10 +26,10 @@ const Body = styled.div`
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 3%;
-	padding-bottom: 3%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 interface Props {

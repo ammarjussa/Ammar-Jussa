@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { LIGHT_THEME } from "../../constants";
 import SunIcon from "../../public/theme-switch.svg";
 import css from "@styled-system/css";
+import Link from "next/link";
 
 const Container = styled.header`
   height: 66px;
@@ -80,7 +81,7 @@ const NavOptions = styled.li`
     transition: all 0.3s;
 
     &:hover {
-      color: gray;
+      color: gray !important;
     }
 
     @media only screen and (max-width: 900px) {
@@ -105,9 +106,10 @@ const StyledSunIcon = styled(SunIcon)`
   color: ${({ theme }) => (theme == LIGHT_THEME ? "#000" : "#fff")} !important;
   width: 25px;
   height: 25px;
+  transition: all 0.3s;
 
   &:hover {
-    color: gray;
+    color: gray !important;
   }
 `;
 
@@ -139,14 +141,16 @@ const Navbar: React.FC<Props> = ({ theme, changeTheme }) => {
 
   return (
     <Container theme={theme}>
-      <Logo onClick={() => alert("hello")}>&lt;AJ/&gt;</Logo>
+      <Logo onClick={() => (window.location.href = "#")}>&lt;AJ/&gt;</Logo>
       <NavContainer theme={theme} open={open}>
         <Nav>
           <NavOptions theme={theme}>
-            <a href="#home1">Home</a>
+            <a href="#">Home</a>
           </NavOptions>
           <NavOptions theme={theme}>
-            <a href="#about">About</a>
+            <Link href="#about">
+              <a onClick={() => (window.location.href = "#about")}>About</a>
+            </Link>
           </NavOptions>
           <NavOptions theme={theme}>
             <a href="#skills">Skills</a>

@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle<{ theme: any }>`
 	html,
 	body {
+		scroll-behavior: smooth;
 		max-width: 100%;
     overflow-x: hidden;
 		transition: 0.5s;
