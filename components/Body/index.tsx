@@ -25,13 +25,19 @@ const BodyTitle = styled.h1`
 const TextContent = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 80vw;
+  align-items: center;
 
   p {
-    width: 45%;
+    ${css({
+      width: ["90vw", null, null, "45%"],
+    })}
   }
+
+  ${css({
+    justifyContent: ["center", null, null, "space-between"],
+    flexDirection: ["column", null, null, "row"],
+    maxWidth: ["90vw", null, null, "80vw"],
+  })}
 `;
 
 const MyImage = styled.img`

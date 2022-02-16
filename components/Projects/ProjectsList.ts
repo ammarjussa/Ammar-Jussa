@@ -6,6 +6,8 @@ export const Tefi = {
   web: "/tefi-web.png",
   phone: "/tefi-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
+  github: "https://github.com/contco/tefi.app/",
+  live: "https://tefi.app/",
 };
 
 export const SmartSchool = {
@@ -16,6 +18,8 @@ export const SmartSchool = {
   web: "/school-web.png",
   phone: "/school-phone.png",
   tools: ["React", "NodeJS", "MongoDB"],
+  github: "https://github.com/ammarjussa/Smart-School",
+  live: "http://smartyschool.herokuapp.com/",
 };
 
 export const Amazon = {
@@ -26,6 +30,8 @@ export const Amazon = {
   web: "/amazon-web.png",
   phone: "/amazon-phone.png",
   tools: ["React", "NodeJS", "Firebase"],
+  github: "https://github.com/ammarjussa/amazon-clone",
+  live: "https://clone-992c7.web.app/",
 };
 
 export const Portfolio = {
@@ -36,6 +42,7 @@ export const Portfolio = {
   web: "/portfolio-web2.png",
   phone: "/portfolio-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS"],
+  live: "https://ammar-jussa.vercel.app/",
 };
 
 export const Chat = {};

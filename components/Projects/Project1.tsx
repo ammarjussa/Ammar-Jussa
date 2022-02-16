@@ -22,6 +22,16 @@ const Box = styled.div`
   align-items: center;
 `;
 
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ${css({
+    my: ["20px"],
+  })}
+`;
+
 const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,10 +55,25 @@ const ProjectText = styled.p`
   text-align: center;
   margin: 0;
   ${css({
-    width: ["90vw", null, null, null, null, "30vw"],
+    width: ["90vw", null, null, null, null, "40vw", null, null, "30vw"],
     mt: ["20px"],
-    mb: ["50px"],
   })}
+`;
+
+const NavLink = styled.a`
+	font-weight: 700;
+	cursor: pointer;
+	margin: 0;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	@media (min-width: 200px) {
+		min-width: unset;
+		margin: 10px 0; 
+
+
 `;
 
 const ProjectImage = styled.img`
@@ -91,6 +116,18 @@ const Project1: React.FC<Props> = ({ project, theme }) => {
           <Box>
             <DescriptionHeader>{project?.subHeading}</DescriptionHeader>
             <ProjectText>{project?.description}</ProjectText>
+            <Flex>
+              {project?.github ? (
+                <NavLink href={project.github} target="_blank">
+                  Github
+                </NavLink>
+              ) : null}
+              {project?.live ? (
+                <NavLink href={project.live} target="_blank">
+                  Live
+                </NavLink>
+              ) : null}
+            </Flex>
             <TechIcons tech={project.tools} theme={theme} />
           </Box>
         </Fade>

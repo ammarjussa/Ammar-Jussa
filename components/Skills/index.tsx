@@ -3,15 +3,16 @@ import css from "@styled-system/css";
 
 const Container = styled.div`
   margin: 0;
-  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-	
+  justify-content: center;
+
   ${css({
     flexWrap: ["nowrap", null, "wrap"],
-		my: '10%',
+    my: "10%",
+    width: ["90vw", null, null, "80vw"],
   })}
 `;
 
@@ -29,7 +30,7 @@ const SkillTable = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   ${css({
-    width: ["60%", null, "45%", "100%"],
+    width: ["55%", null, "40%", "100%"],
   })}
 `;
 
@@ -52,7 +53,6 @@ const SkillContent = styled.div`
 `;
 
 const SubContainer = styled.div`
-  margin: 0px 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -60,7 +60,10 @@ const SubContainer = styled.div`
 `;
 
 const TextContent = styled.div`
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Skills = () => {
