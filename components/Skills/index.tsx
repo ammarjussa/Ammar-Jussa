@@ -73,8 +73,8 @@ const Skills = () => {
         <TextContent>
           <BodyTitle>My Skills</BodyTitle>
           <p>
-            Through my studies, I've gained a solid understanding of computer
-            science and web development concepts, and have dedicated a lot of my
+            Through my studies and work experience, I've gained a solid understanding of computer
+            science and software development concepts, and have dedicated a lot of my
             free time to apply these concepts to real-world scenarios and
             applications.
           </p>
@@ -82,34 +82,34 @@ const Skills = () => {
         <SkillTable>
           <row>
             <SkillContent>
-              <span>&#9675;</span> Javascript ES6
+              <span>&#9675;</span> React / NextJS
             </SkillContent>
-            <SkillContent>
-              <span>&#9675;</span> HTML & CSS
-            </SkillContent>
-          </row>
-          <row>
-            <SkillContent>
-              <span>&#9675;</span> React
-            </SkillContent>
-            <SkillContent>
-              <span>&#9675;</span> SASS
-            </SkillContent>
-          </row>
-          <row>
             <SkillContent>
               <span>&#9675;</span> React Native
             </SkillContent>
+          </row>
+          <row>
             <SkillContent>
-              <span>&#9675;</span> Styled-Components
+              <span>&#9675;</span> HTML / CSS
+            </SkillContent>
+            <SkillContent>
+              <span>&#9675;</span> NodeJS
             </SkillContent>
           </row>
           <row>
             <SkillContent>
-              <span>&#9675;</span> Git
+              <span>&#9675;</span> TypeScript
             </SkillContent>
             <SkillContent>
-              <span>&#9675;</span> PHP & SQL
+              <span>&#9675;</span> MongoDB
+            </SkillContent>
+          </row>
+          <row>
+            <SkillContent>
+              <span>&#9675;</span> GraphQL
+            </SkillContent>
+            <SkillContent>
+              <span>&#9675;</span> Python
             </SkillContent>
           </row>
         </SkillTable>

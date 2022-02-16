@@ -30,6 +30,12 @@ const Flex = styled.div`
   flex-direction: column;
   align-items: center;
 
+  a {
+    ${css({
+      color: "secondary",
+    })}
+  }
+
   ${css({
     my: ["20px"],
   })}
@@ -65,19 +71,18 @@ const ProjectText = styled.p`
 `;
 
 const NavLink = styled.a`
-	font-weight: 700;
-	cursor: pointer;
-	margin: 0;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0;
 
-	&:hover {
-		text-decoration: underline;
-	}
+  &:hover {
+    text-decoration: underline;
+  }
 
-	@media (min-width: 200px) {
-		min-width: unset;
-		margin: 10px 0; 
-
-
+  @media (min-width: 200px) {
+    min-width: unset;
+    margin: 10px 0;
+  }
 `;
 
 const ProjectImage = styled.img`
