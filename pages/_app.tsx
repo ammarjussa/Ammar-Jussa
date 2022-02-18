@@ -4,6 +4,8 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "../styles/global";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { LIGHT_THEME, DARK_THEME } from "../constants";
+import { DefaultSeo } from "next-seo";
+import { MainSEO } from "../next-seo.config";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState<string>(LIGHT_THEME);
@@ -27,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <DefaultSeo {...MainSEO} />
       <ThemeProvider theme={theme === LIGHT_THEME ? lightTheme : darkTheme}>
         <GlobalStyles />
         <Component {...pageProps} theme={theme} changeTheme={changeTheme} />
