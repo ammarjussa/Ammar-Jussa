@@ -137,6 +137,9 @@ const ContactUs = () => {
             alert(
               "Email is sent successfully.\nYou'll be contacted in 1-2 business days"
             );
+            setName("");
+            setEmail("");
+            setMessage("");
           },
           (error) => {
             console.log(error.text);
