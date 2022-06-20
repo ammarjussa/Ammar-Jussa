@@ -42,7 +42,16 @@ export const Portfolio = {
   web: "/portfolio-web2.png",
   phone: "/portfolio-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS"],
-  live: "https://ammar-jussa.vercel.app/",
+  live: "https://ammarjussa.com/",
 };
 
-export const Chat = {};
+export const Facebook_Solana = {
+  heading: "Facebook Web3 App",
+  subHeading: "Solana based Web3 Facebook Clone",
+  description:
+    "A facebook clone containing posts and comments functionality using web3 smart contracts",
+  web: "/portfolio-web2.png",
+  phone: "/portfolio-phone.png",
+  tools: ["NextJS", "TypeScript", "Rust", "Tailwind"],
+  live: "https://main--facebook-solana-web3.netlify.app/",
+};
