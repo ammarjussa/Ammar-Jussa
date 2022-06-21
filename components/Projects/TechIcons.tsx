@@ -9,6 +9,13 @@ import NodePlainIcon from "../../public/nodejsplain.svg";
 import TypeIcon from "../../public/typescript.svg";
 import FireIcon from "../../public/firebase-plain-wordmark.svg";
 import GraphIcon from "../../public/graphql-plain-wordmark.svg";
+import RustIcon from "../../public/rust.svg";
+import StyledIcon from "../../public/styled-components.svg";
+import StyledPlainIcon from "../../public/styled-components-plain.svg";
+import CssIcon from "../../public/css.svg";
+import TailwindIcon from "../../public/tailwindcss.svg";
+import TailwindPlainIcon from "../../public/tailwindcssplain.svg";
+
 import { LIGHT_THEME } from "../../constants";
 
 const Container = styled.div`
@@ -74,6 +81,30 @@ const TechIcons: React.FC<Props> = ({ tech, theme }) => {
             <GraphIcon key={i} fill="#E434AA" />
           ) : (
             <GraphIcon key={i} fill="#fff" />
+          );
+        else if (t === "Rust")
+          return theme === LIGHT_THEME ? (
+            <RustIcon key={i} />
+          ) : (
+            <RustIcon key={i} fill="#fff" />
+          );
+        else if (t === "Styled-Components")
+          return theme === LIGHT_THEME ? (
+            <StyledIcon transform="scale(1.3)" key={i} />
+          ) : (
+            <StyledPlainIcon transform="scale(1.3)" key={i} />
+          );
+        else if (t === "Tailwind")
+          return theme === LIGHT_THEME ? (
+            <TailwindIcon transform="scale(1.4)" key={i} />
+          ) : (
+            <TailwindPlainIcon key={i} transform="scale(1.4)" fill="#fff" />
+          );
+        else if (t === "CSS")
+          return theme === LIGHT_THEME ? (
+            <CssIcon key={i} />
+          ) : (
+            <CssIcon key={i} />
           );
         else return null;
       })}
