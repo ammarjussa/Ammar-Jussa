@@ -5,7 +5,7 @@ export const Tefi = {
     "A portfolio management web application that lets you keep  track of your cryptocurrecies in numerous DeFi platforms in the terra ecosystem. It also displays price charts and daily changes in the prices of cryptocurrecies using terra blockchain.",
   web: "/tefi-web.png",
   phone: "/tefi-phone.png",
-  tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL", "Styled-Components"],
+  tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
   github: "https://github.com/contco/tefi.app/",
   live: "https://tefi.app/",
 };
@@ -41,7 +41,7 @@ export const Portfolio = {
     "A Web App which includes my personal details, skills which I am confident in, stuff that I am passionate about, projects that I have done uptil now and a contact form for contacting if someone needs my assistance.",
   web: "/portfolio-web2.png",
   phone: "/portfolio-phone.png",
-  tools: ["NextJS", "TypeScript", "NodeJS", "Styled-Components"],
+  tools: ["NextJS", "TypeScript", "NodeJS"],
   live: "https://ammarjussa.com/",
 };
 

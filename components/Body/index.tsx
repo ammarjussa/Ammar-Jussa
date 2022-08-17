@@ -5,20 +5,18 @@ import Skills from "../Skills";
 
 const Container = styled.div`
   padding-top: 10%;
-  padding-bottom: 10%;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
 `;
 
 const BodyTitle = styled.h1`
   text-align: center;
   ${css({
     fontSize: ["35px", null, null, "50px"],
-    mt: ["10%", null, null, "5%"],
+    mt: ["10%", null, null, "10%"],
   })}
 `;
 
@@ -28,8 +26,10 @@ const TextContent = styled.div`
   align-items: center;
 
   p {
+    margin: 0;
     ${css({
-      width: ["90vw", null, null, "45%"],
+      width: ["90vw"],
+      textAlign: ["center", null, null, null, null, null, null, null, "left"],
     })}
   }
 
@@ -57,8 +57,7 @@ const Body: React.FC = () => {
         <MyImage src="/ammarjussa.png" />
         <BodyTitle>About Me</BodyTitle>
         <TextContent>
-          <p>{Texts.text1}</p>
-          <p>{Texts.text2}</p>
+          <p>{Texts.text}</p>
         </TextContent>
       </div>
       <div id="skills">
