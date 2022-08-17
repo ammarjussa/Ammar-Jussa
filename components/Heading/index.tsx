@@ -5,6 +5,7 @@ import {
   LargeHeading,
   HeadingContainer,
   Description,
+  StyledSubmit,
 } from "./styles";
 
 const Heading: React.FC = () => {
@@ -12,12 +13,13 @@ const Heading: React.FC = () => {
     <Container>
       <HeadingContainer>
         <SmallHeading>HI, I'M</SmallHeading>
-        <LargeHeading>
-          AMMAR <br /> JUSSA
-        </LargeHeading>
+        <LargeHeading>AMMAR JUSSA</LargeHeading>
         <Description>
           FULL STACK DEVELOPER AND BLOCKCHAIN ENTHUSIAST
         </Description>
+        <StyledSubmit onClick={() => (window.location.href = "#projects")}>
+          View My Work
+        </StyledSubmit>
       </HeadingContainer>
       <Terminal />
     </Container>

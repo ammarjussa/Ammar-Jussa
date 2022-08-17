@@ -48,6 +48,7 @@ export default class MyDocument extends Document {
             data-shuvi-head="true"
           ></meta>
         </Head>
+        <link rel="shortcut icon" href="/favicon.svg" />
         <body>
           <Main />
           <NextScript />

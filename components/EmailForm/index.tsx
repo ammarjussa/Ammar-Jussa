@@ -142,6 +142,9 @@ const ContactUs = () => {
             setMessage("");
           },
           (error) => {
+            alert(
+              "There might be some issue. Please try again later or contact through the other details mentioned. Sorry for inconvenience."
+            );
             console.log(error.text);
           }
         );

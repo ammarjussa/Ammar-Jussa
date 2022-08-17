@@ -17,7 +17,7 @@ const Home: React.FC<Props> = ({ theme, changeTheme }) => {
   return (
     <Layout theme={theme} changeTheme={changeTheme}>
       <Head>
-        <title>Ammar Jussa - Portfolio</title>
+        <title>Ammar Jussa</title>
       </Head>
       <NextSeo {...MainSEO} />
       <Heading />
