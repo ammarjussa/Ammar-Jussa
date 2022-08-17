@@ -50,8 +50,8 @@ export const Facebook_Solana = {
   subHeading: "Solana based Web3 Facebook Clone",
   description:
     "A facebook clone with features like user signup, connecting phantom wallet, and adding posts and comments. The posts and comments are stored in the solana blockchain using smart contract logic.",
-  web: "/portfolio-web2.png",
-  phone: "/portfolio-phone.png",
+  web: "/facebook-web.png",
+  phone: "/facebook-phone.png",
   tools: ["NextJS", "TypeScript", "Rust", "Tailwind"],
   live: "https://main--facebook-solana-web3.netlify.app/",
 };

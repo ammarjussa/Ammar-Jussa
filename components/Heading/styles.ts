@@ -21,6 +21,7 @@ export const Container = styled.div`
   margin-bottom: 5%;
 
   ${css({
+    px: ["6%"],
     flexDirection: ["column", null, null, null, "row"],
     justifyContent: ["center", null, null, null, null, "space-between"],
   })}
@@ -42,14 +43,37 @@ export const SmallHeading = styled.h1`
 export const LargeHeading = styled.h1`
   font-size: 80px;
   font-family: arial;
+
   ${css({
-    fontSize: ["50px", null, null, null, null, "80px"],
+    fontSize: ["40px", null, null, null, null, "60px"],
+    my: ["20px"],
   })}
 `;
 
 export const Description = styled.h1`
+  max-width: 40vw;
   ${css({
     fontSize: ["20px", null, null, null, null, "25px"],
     mb: ["10%", null, null, null, null, 0],
   })}
+`;
+
+export const StyledSubmit = styled.div`
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  background-color: ${({ theme }) => theme.colors.button};
+  color: ${({ theme }) => theme.colors.buttonText};
+  cursor: pointer;
+  ${css({
+    width: ["300px"],
+    py: "15px",
+    mt: "40px",
+  })};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary};
+  }
 `;
