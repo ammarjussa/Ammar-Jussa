@@ -8,27 +8,42 @@ init(process.env.NEXT_PUBLIC_USER_ID as string);
 
 const ContactContainer = styled.div`
   width: 85vw;
-  min-height: 80vh;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   align-self: center;
   display: flex;
   align-items: center;
+  flex-direction: column;
   transition: 0.5s;
   ${css({
+    minHeight: ["65vh", null, null, null, "51vh", null, null, null, "80vh"],
     bg: "form",
-    flexDirection: ["column", null, null, "row"],
     justifyContent: ["center", null, null, "space-around"],
     my: ["20%", null, null, "0px"],
+  })}
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  ${css({
+    flexDirection: ["column", null, null, "row"],
+  })}
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  ${css({
+    mt: ["20%", null, null, "0px"],
   })}
 `;
 
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 51vw;
 
   ${css({
-    ml: ["0px", null, null, "10%"],
+    ml: ["0px", null, null, "15%"],
     mt: ["20%", null, null, "0px"],
   })}
 `;
@@ -44,8 +59,15 @@ const SocialMediaContainer = styled.div`
 `;
 
 const SocialLinks = styled.a`
-  margin-right: 10px;
   cursor: pointer;
+
+  img {
+    ${css({
+      height: ["50px"],
+      width: ["50px"],
+      mr: ["5px", null, null, "10px"],
+    })}
+  }
 
   &:hover {
     opacity: 0.7;
@@ -56,9 +78,9 @@ const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   ${css({
-    mr: ["0px", null, null, "10%"],
-    my: ["20%", null, null, "0px"],
-    width: ["70vw", null, null, "50vw"],
+    mr: ["0px", null, null, "15%"],
+    my: ["25%", null, null, "0px"],
+    width: ["65vw", null, null, "40vw"],
   })}
 `;
 
@@ -108,6 +130,14 @@ const StyledSubmit = styled.input`
   }
 `;
 
+const ContactImg = styled.img`
+  ${css({
+    height: ["100%", null, null, "70%"],
+    width: ["100%", null, null, "70%"],
+    mb: [3, null, null, 0],
+  })};
+`;
+
 const ContactUs = () => {
   const form: any = useRef();
   const [name, setName] = useState("");
@@ -154,55 +184,82 @@ const ContactUs = () => {
   };
 
   return (
-    <ContactContainer>
-      <DescriptionContainer>
-        <div>
-          <h1>CONTACT</h1>
-          <br />
+    <>
+      <ContactContainer>
+        <Title>CONTACT</Title>
+        <FlexContainer>
+          <DescriptionContainer>
+            <div>
+              <StyledText></StyledText>
+              <ContactImg src="/contact.svg" alt="contact" />
+            </div>
+            <SocialMediaContainer>
+              <div>
+                <SocialLinks
+                  href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
+                  target="_blank"
+                >
+                  <img src="/linkedin.svg" />
+                </SocialLinks>
 
-          <StyledText>
-            <b>Get in touch.</b>
-          </StyledText>
-          <StyledText>Email: ammar26497@gmail.com</StyledText>
-        </div>
-        <SocialMediaContainer>
-          <div>
-            <SocialLinks
-              href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
-              target="_blank"
-            >
-              <img src="/linkedin.svg" height="50px" width="50px" />
-            </SocialLinks>
+                <SocialLinks
+                  href="https://github.com/ammarjussa/"
+                  target="_blank"
+                >
+                  <img src="/github.png" />
+                </SocialLinks>
+                <SocialLinks
+                  href="https://github.com/ammarjussa/"
+                  target="_blank"
+                >
+                  <img src="/leetcode.png" />
+                </SocialLinks>
+                <SocialLinks
+                  href="https://github.com/ammarjussa/"
+                  target="_blank"
+                >
+                  <img src="/hackerrank.png" />
+                </SocialLinks>
+                <SocialLinks
+                  href="https://github.com/ammarjussa/"
+                  target="_blank"
+                >
+                  <img src="/upwork.png" />
+                </SocialLinks>
+                <SocialLinks
+                  href="https://github.com/ammarjussa/"
+                  target="_blank"
+                >
+                  <img src="/fiverr.png" />
+                </SocialLinks>
+              </div>
+            </SocialMediaContainer>
+          </DescriptionContainer>
 
-            <SocialLinks href="https://github.com/ammarjussa/" target="_blank">
-              <img src="/github.png" height="50px" width="50px" />
-            </SocialLinks>
-          </div>
-        </SocialMediaContainer>
-      </DescriptionContainer>
-
-      <FormContainer ref={form} onSubmit={sendEmail}>
-        <StyledInput
-          type="text"
-          value={name}
-          placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <StyledInput
-          type="email"
-          value={email}
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <StyledArea
-          name="message"
-          value={message}
-          placeholder="Message"
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <StyledSubmit type="submit" value="Send" />
-      </FormContainer>
-    </ContactContainer>
+          <FormContainer ref={form} onSubmit={sendEmail}>
+            <StyledInput
+              type="text"
+              value={name}
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+            <StyledInput
+              type="email"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <StyledArea
+              name="message"
+              value={message}
+              placeholder="Message"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <StyledSubmit type="submit" value="Send" />
+          </FormContainer>
+        </FlexContainer>
+      </ContactContainer>
+    </>
   );
 };
 
