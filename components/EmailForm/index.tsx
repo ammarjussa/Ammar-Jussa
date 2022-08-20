@@ -63,8 +63,8 @@ const SocialLinks = styled.a`
 
   img {
     ${css({
-      height: ["50px"],
-      width: ["50px"],
+      height: ["30px", null, null, "50px"],
+      width: ["30px", null, null, "50px"],
       mr: ["5px", null, null, "10px"],
     })}
   }
@@ -208,26 +208,23 @@ const ContactUs = () => {
                 >
                   <img src="/github.png" />
                 </SocialLinks>
-                <SocialLinks
-                  href="https://github.com/ammarjussa/"
-                  target="_blank"
-                >
+                <SocialLinks href="https://leetcode.com/jussa/" target="_blank">
                   <img src="/leetcode.png" />
                 </SocialLinks>
                 <SocialLinks
-                  href="https://github.com/ammarjussa/"
+                  href="https://www.hackerrank.com/ammar26497"
                   target="_blank"
                 >
                   <img src="/hackerrank.png" />
                 </SocialLinks>
                 <SocialLinks
-                  href="https://github.com/ammarjussa/"
+                  href="https://www.upwork.com/freelancers/~01d40397a7eb0845c0"
                   target="_blank"
                 >
                   <img src="/upwork.png" />
                 </SocialLinks>
                 <SocialLinks
-                  href="https://github.com/ammarjussa/"
+                  href="https://www.fiverr.com/ammarjussa?up_rollout=true"
                   target="_blank"
                 >
                   <img src="/fiverr.png" />
