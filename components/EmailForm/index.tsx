@@ -8,44 +8,66 @@ init(process.env.NEXT_PUBLIC_USER_ID as string);
 
 const ContactContainer = styled.div`
   width: 85vw;
-  min-height: 80vh;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   align-self: center;
   display: flex;
   align-items: center;
+  flex-direction: column;
   transition: 0.5s;
   ${css({
+    minHeight: ["65vh", null, null, null, "51vh", null, null, null, "80vh"],
     bg: "form",
-    flexDirection: ["column", null, null, "row"],
     justifyContent: ["center", null, null, "space-around"],
     my: ["20%", null, null, "0px"],
+  })}
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  ${css({
+    flexDirection: ["column", null, null, null, null, "row"],
+  })}
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  margin: 0;
+  ${css({
+    mt: ["20%", null, null, null, null, "0px"],
   })}
 `;
 
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 52vw;
 
   ${css({
-    ml: ["0px", null, null, "10%"],
-    mt: ["20%", null, null, "0px"],
+    ml: ["0px", null, null, null, null, "15%"],
+    mt: ["20%", null, null, null, null, "0px"],
   })}
-`;
-
-const StyledText = styled.p`
-  margin: 0;
 `;
 
 const SocialMediaContainer = styled.div`
   display: flex;
-  flex-direction: column;
   margin-top: 20px;
+  flex-wrap: wrap;
+  ${css({
+    justifyContent: ["center", null, null, null, null, "flex-start"],
+  })}
 `;
 
 const SocialLinks = styled.a`
-  margin-right: 10px;
   cursor: pointer;
+
+  img {
+    ${css({
+      height: ["30px", null, null, "50px"],
+      width: ["30px", null, null, "50px"],
+      mr: ["5px", null, null, "10px"],
+    })}
+  }
 
   &:hover {
     opacity: 0.7;
@@ -56,9 +78,9 @@ const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   ${css({
-    mr: ["0px", null, null, "10%"],
-    my: ["20%", null, null, "0px"],
-    width: ["70vw", null, null, "50vw"],
+    mr: ["0px", null, null, null, null, "15%"],
+    my: ["25%", null, null, null, null, "0px"],
+    width: ["65vw", null, null, "56vw", null, "40vw"],
   })}
 `;
 
@@ -66,7 +88,7 @@ const StyledInput = styled.input`
   display: flex;
   ${css({
     pl: "10px",
-    py: "10px",
+    py: ["8px", null, null, null, null, "10px"],
     marginBottom: "20px",
   })}
 
@@ -106,6 +128,14 @@ const StyledSubmit = styled.input`
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.secondary};
   }
+`;
+
+const ContactImg = styled.img`
+  ${css({
+    height: ["100%", null, null, null, null, "60%"],
+    width: ["100%", null, null, null, null, "60%"],
+    mb: [3],
+  })};
 `;
 
 const ContactUs = () => {
@@ -154,55 +184,76 @@ const ContactUs = () => {
   };
 
   return (
-    <ContactContainer>
-      <DescriptionContainer>
-        <div>
-          <h1>CONTACT</h1>
-          <br />
+    <>
+      <ContactContainer>
+        <Title>CONTACT</Title>
+        <FlexContainer>
+          <DescriptionContainer>
+            <div>
+              <ContactImg src="/contact.svg" alt="contact" />
+            </div>
+            <SocialMediaContainer>
+              <SocialLinks
+                href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
+                target="_blank"
+              >
+                <img src="/linkedin.svg" />
+              </SocialLinks>
 
-          <StyledText>
-            <b>Get in touch.</b>
-          </StyledText>
-          <StyledText>Email: ammar26497@gmail.com</StyledText>
-        </div>
-        <SocialMediaContainer>
-          <div>
-            <SocialLinks
-              href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
-              target="_blank"
-            >
-              <img src="/linkedin.svg" height="50px" width="50px" />
-            </SocialLinks>
+              <SocialLinks
+                href="https://github.com/ammarjussa/"
+                target="_blank"
+              >
+                <img src="/github.png" />
+              </SocialLinks>
+              <SocialLinks href="https://leetcode.com/jussa/" target="_blank">
+                <img src="/leetcode.png" />
+              </SocialLinks>
+              <SocialLinks
+                href="https://www.hackerrank.com/ammar26497"
+                target="_blank"
+              >
+                <img src="/hackerrank.png" />
+              </SocialLinks>
+              <SocialLinks
+                href="https://www.upwork.com/freelancers/~01d40397a7eb0845c0"
+                target="_blank"
+              >
+                <img src="/upwork.png" />
+              </SocialLinks>
+              <SocialLinks
+                href="https://www.fiverr.com/ammarjussa?up_rollout=true"
+                target="_blank"
+              >
+                <img src="/fiverr.png" />
+              </SocialLinks>
+            </SocialMediaContainer>
+          </DescriptionContainer>
 
-            <SocialLinks href="https://github.com/ammarjussa/" target="_blank">
-              <img src="/github.png" height="50px" width="50px" />
-            </SocialLinks>
-          </div>
-        </SocialMediaContainer>
-      </DescriptionContainer>
-
-      <FormContainer ref={form} onSubmit={sendEmail}>
-        <StyledInput
-          type="text"
-          value={name}
-          placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <StyledInput
-          type="email"
-          value={email}
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <StyledArea
-          name="message"
-          value={message}
-          placeholder="Message"
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <StyledSubmit type="submit" value="Send" />
-      </FormContainer>
-    </ContactContainer>
+          <FormContainer ref={form} onSubmit={sendEmail}>
+            <StyledInput
+              type="text"
+              value={name}
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+            />
+            <StyledInput
+              type="email"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <StyledArea
+              name="message"
+              value={message}
+              placeholder="Message"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <StyledSubmit type="submit" value="Send" />
+          </FormContainer>
+        </FlexContainer>
+      </ContactContainer>
+    </>
   );
 };
 
