@@ -26,36 +26,36 @@ const FlexContainer = styled.div`
   display: flex;
   align-items: center;
   ${css({
-    flexDirection: ["column", null, null, "row"],
+    flexDirection: ["column", null, null, null, null, "row"],
   })}
 `;
 
 const Title = styled.h1`
   text-align: center;
+  margin: 0;
   ${css({
-    mt: ["20%", null, null, "0px"],
+    mt: ["20%", null, null, null, null, "0px"],
   })}
 `;
 
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 51vw;
+  width: 52vw;
 
   ${css({
-    ml: ["0px", null, null, "15%"],
-    mt: ["20%", null, null, "0px"],
+    ml: ["0px", null, null, null, null, "15%"],
+    mt: ["20%", null, null, null, null, "0px"],
   })}
-`;
-
-const StyledText = styled.p`
-  margin: 0;
 `;
 
 const SocialMediaContainer = styled.div`
   display: flex;
-  flex-direction: column;
   margin-top: 20px;
+  flex-wrap: wrap;
+  ${css({
+    justifyContent: ["center", null, null, null, null, "flex-start"],
+  })}
 `;
 
 const SocialLinks = styled.a`
@@ -78,9 +78,9 @@ const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   ${css({
-    mr: ["0px", null, null, "15%"],
-    my: ["25%", null, null, "0px"],
-    width: ["65vw", null, null, "40vw"],
+    mr: ["0px", null, null, null, null, "15%"],
+    my: ["25%", null, null, null, null, "0px"],
+    width: ["65vw", null, null, "56vw", null, "40vw"],
   })}
 `;
 
@@ -88,7 +88,7 @@ const StyledInput = styled.input`
   display: flex;
   ${css({
     pl: "10px",
-    py: "10px",
+    py: ["8px", null, null, null, null, "10px"],
     marginBottom: "20px",
   })}
 
@@ -132,9 +132,9 @@ const StyledSubmit = styled.input`
 
 const ContactImg = styled.img`
   ${css({
-    height: ["100%", null, null, "70%"],
-    width: ["100%", null, null, "70%"],
-    mb: [3, null, null, 0],
+    height: ["100%", null, null, null, null, "60%"],
+    width: ["100%", null, null, null, null, "60%"],
+    mb: [3],
   })};
 `;
 
@@ -190,46 +190,43 @@ const ContactUs = () => {
         <FlexContainer>
           <DescriptionContainer>
             <div>
-              <StyledText></StyledText>
               <ContactImg src="/contact.svg" alt="contact" />
             </div>
             <SocialMediaContainer>
-              <div>
-                <SocialLinks
-                  href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
-                  target="_blank"
-                >
-                  <img src="/linkedin.svg" />
-                </SocialLinks>
+              <SocialLinks
+                href="https://www.linkedin.com/in/ammar-jussa-56a1b216a/"
+                target="_blank"
+              >
+                <img src="/linkedin.svg" />
+              </SocialLinks>
 
-                <SocialLinks
-                  href="https://github.com/ammarjussa/"
-                  target="_blank"
-                >
-                  <img src="/github.png" />
-                </SocialLinks>
-                <SocialLinks href="https://leetcode.com/jussa/" target="_blank">
-                  <img src="/leetcode.png" />
-                </SocialLinks>
-                <SocialLinks
-                  href="https://www.hackerrank.com/ammar26497"
-                  target="_blank"
-                >
-                  <img src="/hackerrank.png" />
-                </SocialLinks>
-                <SocialLinks
-                  href="https://www.upwork.com/freelancers/~01d40397a7eb0845c0"
-                  target="_blank"
-                >
-                  <img src="/upwork.png" />
-                </SocialLinks>
-                <SocialLinks
-                  href="https://www.fiverr.com/ammarjussa?up_rollout=true"
-                  target="_blank"
-                >
-                  <img src="/fiverr.png" />
-                </SocialLinks>
-              </div>
+              <SocialLinks
+                href="https://github.com/ammarjussa/"
+                target="_blank"
+              >
+                <img src="/github.png" />
+              </SocialLinks>
+              <SocialLinks href="https://leetcode.com/jussa/" target="_blank">
+                <img src="/leetcode.png" />
+              </SocialLinks>
+              <SocialLinks
+                href="https://www.hackerrank.com/ammar26497"
+                target="_blank"
+              >
+                <img src="/hackerrank.png" />
+              </SocialLinks>
+              <SocialLinks
+                href="https://www.upwork.com/freelancers/~01d40397a7eb0845c0"
+                target="_blank"
+              >
+                <img src="/upwork.png" />
+              </SocialLinks>
+              <SocialLinks
+                href="https://www.fiverr.com/ammarjussa?up_rollout=true"
+                target="_blank"
+              >
+                <img src="/fiverr.png" />
+              </SocialLinks>
             </SocialMediaContainer>
           </DescriptionContainer>
 
