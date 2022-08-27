@@ -15,6 +15,7 @@ import StyledPlainIcon from "../../public/styled-components-plain.svg";
 import CssIcon from "../../public/css.svg";
 import TailwindIcon from "../../public/tailwindcss.svg";
 import TailwindPlainIcon from "../../public/tailwindcssplain.svg";
+// import SolidityIcon from "../../public/solidity.svg";
 
 import { LIGHT_THEME } from "../../constants";
 
@@ -39,7 +40,7 @@ interface Props {
 const TechIcons: React.FC<Props> = ({ tech, theme }) => {
   return (
     <Container>
-      {tech.map((t, i) => {
+      {tech.map((t: string, i: number) => {
         if (t === "React")
           return theme === LIGHT_THEME ? (
             <ReactIcon fill="#00d1f7" key={i} />
@@ -101,6 +102,12 @@ const TechIcons: React.FC<Props> = ({ tech, theme }) => {
             <TailwindPlainIcon key={i} transform="scale(1.4)" fill="#fff" />
           );
         else if (t === "CSS")
+          return theme === LIGHT_THEME ? (
+            <CssIcon key={i} />
+          ) : (
+            <CssIcon key={i} />
+          );
+        else if (t === "Solidity")
           return theme === LIGHT_THEME ? (
             <CssIcon key={i} />
           ) : (

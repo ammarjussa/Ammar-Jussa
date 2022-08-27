@@ -3,10 +3,10 @@ import Project1 from "./Project1";
 import Project2 from "./Project2";
 import {
   Tefi,
-  Amazon,
   SmartSchool,
   Portfolio,
   Facebook_Solana,
+  Twitter_Web3,
 } from "./ProjectsList";
 
 const Container = styled.div`
@@ -29,10 +29,10 @@ const Projects: React.FC<Props> = ({ theme }) => {
       <BodyTitle>View My Work</BodyTitle>
       <Container>
         <Project1 theme={theme} project={Tefi} />
-        <Project2 theme={theme} project={Amazon} />
+        <Project2 theme={theme} project={Twitter_Web3} />
         <Project1 theme={theme} project={Portfolio} />
-        <Project2 theme={theme} project={SmartSchool} />
-        <Project1 theme={theme} project={Facebook_Solana} />
+        <Project2 theme={theme} project={Facebook_Solana} />
+        <Project1 theme={theme} project={SmartSchool} />
       </Container>
     </>
   );

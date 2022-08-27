@@ -22,18 +22,6 @@ export const SmartSchool = {
   live: "http://smartyschool.herokuapp.com/",
 };
 
-export const Amazon = {
-  heading: "Amazon Clone",
-  subHeading: "A Clone App of Amazon.com",
-  description:
-    "This is an amazon clone with a login/signup feature implemented using Firebase. The user would be able to view the listed products and put them into the shopping cart. Users can delete the items in the cart. Users can then checkout and buy those items using stripe payment.",
-  web: "/amazon-web.png",
-  phone: "/amazon-phone.png",
-  tools: ["React", "NodeJS", "Firebase"],
-  github: "https://github.com/ammarjussa/amazon-clone",
-  live: "https://clone-992c7.web.app/",
-};
-
 export const Portfolio = {
   heading: "Portfolio App",
   subHeading: "A portfolio App containing my Skills and Projects",
@@ -54,4 +42,15 @@ export const Facebook_Solana = {
   phone: "/facebook-phone.png",
   tools: ["NextJS", "TypeScript", "Rust", "Tailwind"],
   live: "https://main--facebook-solana-web3.netlify.app/",
+};
+
+export const Twitter_Web3 = {
+  heading: "Twitter Web3 App",
+  subHeading: "A Web3 Twitter App build on Polygon",
+  description:
+    "A twitter clone with features like adding tweets, liking and some addtional features including donating MATIC token to the tweeters.",
+  web: "/twitter-web.png",
+  phone: "/twitter-phone.png",
+  tools: ["NextJS", "TypeScript", "Solidity"],
+  live: "https://twitter-polygon-web3.netlify.app/",
 };
