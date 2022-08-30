@@ -15,7 +15,7 @@ import StyledPlainIcon from "../../public/styled-components-plain.svg";
 import CssIcon from "../../public/css.svg";
 import TailwindIcon from "../../public/tailwindcss.svg";
 import TailwindPlainIcon from "../../public/tailwindcssplain.svg";
-// import SolidityIcon from "../../public/solidity.svg";
+import SolidityIcon from "../../public/solidity.svg";
 
 import { LIGHT_THEME } from "../../constants";
 
@@ -109,9 +109,9 @@ const TechIcons: React.FC<Props> = ({ tech, theme }) => {
           );
         else if (t === "Solidity")
           return theme === LIGHT_THEME ? (
-            <CssIcon key={i} />
+            <SolidityIcon key={i} />
           ) : (
-            <CssIcon key={i} />
+            <SolidityIcon fill="#fff" key={i} />
           );
         else return null;
       })}
