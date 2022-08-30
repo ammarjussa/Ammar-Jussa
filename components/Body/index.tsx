@@ -25,7 +25,7 @@ const TextContent = styled.div`
     margin: 0;
     ${css({
       mt: 3,
-      width: ["80vw"],
+      width: ["90vw", null, null, "80vw"],
       textAlign: ["center", null, null, null, null, null, null, null, "left"],
     })}
   }
