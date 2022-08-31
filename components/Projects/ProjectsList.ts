@@ -41,6 +41,7 @@ export const Facebook_Solana = {
   web: "/facebook-web.png",
   phone: "/facebook-phone.png",
   tools: ["NextJS", "TypeScript", "Rust", "Tailwind"],
+  github: "https://github.com/ammarjussa/facebook-solana-3.0",
   live: "https://main--facebook-solana-web3.netlify.app/",
 };
 
@@ -48,9 +49,10 @@ export const Twitter_Web3 = {
   heading: "Twitter Web3 App",
   subHeading: "A Web3 Twitter App build on Polygon",
   description:
-    "A twitter clone with features like adding tweets, liking and some addtional features including donating MATIC token to the tweeters.",
+    "A twitter clone with features like connecting metamask, adding posts and liking the tweets. The additional feature of donating MATIC token to tweeters is also added which is specific to web3. This logic is implemented with smart contracts using Solidity.",
   web: "/twitter-web.png",
   phone: "/twitter-phone.png",
   tools: ["NextJS", "TypeScript", "Solidity"],
+  github: "https://github.com/ammarjussa/Twitter-3.0",
   live: "https://twitter-polygon-web3.netlify.app/",
 };
