@@ -21,14 +21,11 @@ const BodyTitle = styled.h1`
 `;
 
 const TextContent = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
   p {
     margin: 0;
     ${css({
-      width: ["90vw"],
+      mt: 3,
+      width: ["90vw", null, null, "80vw"],
       textAlign: ["center", null, null, null, null, null, null, null, "left"],
     })}
   }
@@ -58,6 +55,9 @@ const Body: React.FC = () => {
         <BodyTitle>About Me</BodyTitle>
         <TextContent>
           <p>{Texts.text}</p>
+          <p>{Texts.text2}</p>
+          <p>{Texts.text3}</p>
+          <p>{Texts.text4}</p>
         </TextContent>
       </div>
       <div id="skills">
