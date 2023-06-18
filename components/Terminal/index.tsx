@@ -23,7 +23,7 @@ const Terminal = () => {
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">name</CodeColor>:{" "}
             <CodeColor color="#74eb70">'Ammar Jussa'</CodeColor>, <br />
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">age</CodeColor>:{" "}
-            <CodeColor color="#74eb70">24</CodeColor>,<br />
+            <CodeColor color="#74eb70">25</CodeColor>,<br />
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">role</CodeColor>:{" "}
             <CodeColor color="#74eb70">'Software Engineer'</CodeColor>,<br />
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">
@@ -31,7 +31,11 @@ const Terminal = () => {
             </CodeColor>:{" "}
             <CodeColor>
               '
-              <a className="link" target="_blank" href="https://github.com/ammarjussa">
+              <a
+                className="link"
+                target="_blank"
+                href="https://github.com/ammarjussa"
+              >
                 https://github.com/ammarjussa
               </a>
               '

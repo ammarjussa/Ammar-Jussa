@@ -7,6 +7,7 @@ import {
   Portfolio,
   Facebook_Solana,
   Twitter_Web3,
+  Bank_App,
 } from "./ProjectsList";
 
 const Container = styled.div`
@@ -33,6 +34,7 @@ const Projects: React.FC<Props> = ({ theme }) => {
         <Project1 theme={theme} project={Portfolio} />
         <Project2 theme={theme} project={Facebook_Solana} />
         <Project1 theme={theme} project={SmartSchool} />
+        <Project2 theme={theme} project={Bank_App} />
       </Container>
     </>
   );
