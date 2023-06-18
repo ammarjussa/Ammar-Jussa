@@ -7,7 +7,6 @@ export const Tefi = {
   phone: "/tefi-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
   github: "https://github.com/contco/tefi.app/",
-  live: "https://tefi.app/",
 };
 
 export const SmartSchool = {
