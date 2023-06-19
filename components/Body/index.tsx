@@ -37,6 +37,40 @@ const TextContent = styled.div`
   })}
 `;
 
+const EducationFlex = styled.div`
+  display: flex;
+  margin-top: 40px;
+  ${css({
+    justifyContent: ["center", null, null, "space-between"],
+    flexDirection: ["column", null, null, "row"],
+    maxWidth: ["90vw", null, null, "50vw"],
+  })}
+`;
+
+const EduFlex = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const EducationLogo = styled.img`
+  margin-bottom: 10px;
+  ${css({
+    width: "170px",
+    height: "170px",
+  })}
+`;
+
+const EducationContent = styled.div`
+  p {
+    margin: 0px;
+    ${css({
+      width: ["90vw", null, null, "40vw"],
+      textAlign: "center",
+    })}
+  }
+`;
+
 const MyImage = styled.img`
   height: 20%;
   border-radius: 3%;
@@ -59,6 +93,65 @@ const Body: React.FC = () => {
           <p>{Texts.text3}</p>
           <p>{Texts.text4}</p>
         </TextContent>
+        <BodyTitle>Education</BodyTitle>
+        <EducationFlex>
+          <EduFlex>
+            <EducationLogo src="/lums.svg" />
+            <EducationContent>
+              <p>
+                <b>University Name: </b>
+                {Texts.uni1}
+              </p>
+              <p>
+                <b>Place: </b>
+                {Texts.place1}
+              </p>
+              <p>
+                <b>Degree: </b>
+                {Texts.degree1}
+              </p>
+              <p>
+                <b>Date: </b>
+                {Texts.date1}
+              </p>
+              <p>
+                <b> Relevant Courses: </b>
+                {Texts.relevantCourses1.course1},&nbsp;
+                {Texts.relevantCourses1.course2},&nbsp;
+                {Texts.relevantCourses1.course3},&nbsp;
+                {Texts.relevantCourses1.course4}
+              </p>
+            </EducationContent>
+          </EduFlex>
+          <EduFlex>
+            <EducationLogo src="/kingston.png" />
+            <EducationContent>
+              <p>
+                <b>University Name: </b>
+                {Texts.uni2}
+              </p>
+              <p>
+                <b>Place: </b>
+                {Texts.place2}
+              </p>
+              <p>
+                <b>Degree: </b>
+                {Texts.degree2}
+              </p>
+              <p>
+                <b>Date: </b>
+                {Texts.date2}
+              </p>
+              <p>
+                <b> Relevant Courses: </b>
+                {Texts.relevantCourses2.course1},&nbsp;
+                {Texts.relevantCourses2.course2},&nbsp;
+                {Texts.relevantCourses2.course3},&nbsp;
+                {Texts.relevantCourses2.course4}
+              </p>
+            </EducationContent>
+          </EduFlex>
+        </EducationFlex>
       </div>
       <div id="skills">
         <Skills />
