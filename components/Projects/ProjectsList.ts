@@ -63,4 +63,5 @@ export const Bank_App = {
     "A banking application developed as part of a software architecture course for a masters degree. The application aimed to provide a convenient and secure platform for users to manage their banking needs, such as checking account balances, transferring funds, and paying bills.",
   web: "/banking.png",
   tools: ["React", "Java", "Spring", "MongoDB"],
+  github: "https://github.com/ammarjussa/Bank-Application",
 };
