@@ -23,7 +23,7 @@ const Terminal = () => {
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">name</CodeColor>:{" "}
             <CodeColor color="#74eb70">'Ammar Jussa'</CodeColor>, <br />
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">age</CodeColor>:{" "}
-            <CodeColor color="#74eb70">25</CodeColor>,<br />
+            <CodeColor color="#74eb70">26</CodeColor>,<br />
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">role</CodeColor>:{" "}
             <CodeColor color="#74eb70">'Software Engineer'</CodeColor>,<br />
             &emsp;&emsp;&emsp;<CodeColor color="#d270eb">

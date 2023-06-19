@@ -7,7 +7,6 @@ export const Tefi = {
   phone: "/tefi-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
   github: "https://github.com/contco/tefi.app/",
-  live: "https://tefi.app/",
 };
 
 export const SmartSchool = {
@@ -62,6 +61,6 @@ export const Bank_App = {
   subHeading: "A simple banking system",
   description:
     "A banking application developed as part of a software architecture course for a masters degree. The application aimed to provide a convenient and secure platform for users to manage their banking needs, such as checking account balances, transferring funds, and paying bills.",
-  web: "/twitter-web.png",
+  web: "/banking.png",
   tools: ["React", "Java", "Spring", "MongoDB"],
 };
