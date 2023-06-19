@@ -55,3 +55,13 @@ export const Twitter_Web3 = {
   github: "https://github.com/ammarjussa/Twitter-3.0",
   live: "https://twitter-polygon-web3.netlify.app/",
 };
+
+export const Bank_App = {
+  heading: "Banking Application",
+  subHeading: "A simple banking system",
+  description:
+    "A banking application developed as part of a software architecture course for a masters degree. The application aimed to provide a convenient and secure platform for users to manage their banking needs, such as checking account balances, transferring funds, and paying bills.",
+  web: "/banking.png",
+  tools: ["React", "Java", "Spring", "MongoDB"],
+  github: "https://github.com/ammarjussa/Bank-Application",
+};

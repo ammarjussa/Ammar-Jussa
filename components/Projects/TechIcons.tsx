@@ -16,6 +16,10 @@ import CssIcon from "../../public/css.svg";
 import TailwindIcon from "../../public/tailwindcss.svg";
 import TailwindPlainIcon from "../../public/tailwindcssplain.svg";
 import SolidityIcon from "../../public/solidity.svg";
+import JavaIcon from "../../public/java.svg";
+import JavaPlainIcon from "../../public/javaPlain.svg";
+import SpringIcon from "../../public/spring.svg";
+import SpringPlainIcon from "../../public/springPlain.svg";
 
 import { LIGHT_THEME } from "../../constants";
 
@@ -112,6 +116,21 @@ const TechIcons: React.FC<Props> = ({ tech, theme }) => {
             <SolidityIcon key={i} />
           ) : (
             <SolidityIcon fill="#fff" key={i} />
+          );
+        else if (t === "Java")
+          return theme === LIGHT_THEME ? (
+            <JavaIcon key={i} />
+          ) : (
+            <JavaPlainIcon key={i} />
+          );
+        else if (t === "Spring")
+          return theme === LIGHT_THEME ? (
+            <SpringIcon style={{ width: "21%", marginTop: "2%" }} key={i} />
+          ) : (
+            <SpringPlainIcon
+              style={{ width: "21%", marginTop: "2%" }}
+              key={i}
+            />
           );
         else return null;
       })}
