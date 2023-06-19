@@ -104,6 +104,26 @@ export const Description = styled.h1`
   })}
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ${css({
+    flexDirection: [
+      "column",
+      null,
+      "row",
+      null,
+      null,
+      null,
+      null,
+      null,
+      "column",
+      "row",
+    ],
+  })}
+`;
+
 export const StyledSubmit = styled.div`
   border: 1px solid lightgray;
   display: flex;
@@ -124,14 +144,46 @@ export const StyledSubmit = styled.div`
       null,
       "flex-start",
     ],
-    width: ["250px", null, null, null, null, null, null, null, "300px"],
+    width: ["200px", null, null, null, null, null, null, null, "300px"],
     py: "15px",
     mt: [0, null, null, null, null, null, null, null, "40px"],
-    mb: ["40px", null, null, null, null, null, null, null, 0],
+    mb: ["30px", null, null, null, null, null, null, null, 0],
   })};
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.secondary};
+  }
+`;
+
+export const DownloadButton = styled.a`
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  background-color: ${({ theme }) => theme.colors.button};
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.buttonText} !important;
+  ${css({
+    alignSelf: [
+      "center",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "flex-start",
+    ],
+    width: ["200px", null, null, null, null, null, null, null, "300px"],
+    py: "15px",
+    mt: [0, null, null, null, null, null, null, null, "40px"],
+    mb: ["30px", null, null, null, null, null, null, null, 0],
+  })};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.secondary} !important;
   }
 `;

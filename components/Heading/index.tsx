@@ -6,6 +6,8 @@ import {
   HeadingContainer,
   Description,
   StyledSubmit,
+  ButtonContainer,
+  DownloadButton,
 } from "./styles";
 
 const Heading: React.FC = () => {
@@ -17,9 +19,14 @@ const Heading: React.FC = () => {
         <Description>
           FULL STACK DEVELOPER AND BLOCKCHAIN ENTHUSIAST
         </Description>
-        <StyledSubmit onClick={() => (window.location.href = "#projects")}>
-          View My Work
-        </StyledSubmit>
+        <ButtonContainer>
+          <StyledSubmit onClick={() => (window.location.href = "#projects")}>
+            View My Work
+          </StyledSubmit>
+          <DownloadButton href="/AmmarCV.docx" download>
+            Download My CV
+          </DownloadButton>
+        </ButtonContainer>
       </HeadingContainer>
       <Terminal />
     </Container>
