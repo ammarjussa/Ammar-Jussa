@@ -2,5 +2,27 @@
   "text": "I am a Full Stack Web and Mobile Application Developer with a keen interest in Blockchain technology. I have around two years of professional experience in Software Engineering; building reliable, performant, and scalable applications.",
   "text2": "I frequently work with JavaScript technologies like React.js, Next.js, Node.js, Express.js, React Native, etc. I am also fond of programming languages like TypeScript, Python, C++, and Rust.",
   "text3": "I have been diving deep into blockchain development and so far done multiple projects involving smart contract programming in Solidity, Hardhat, Truffle, Web3.js, Ethers.js, etc. I am extremely willing to expand my knowledge and take up new challenges in this field.",
-  "text4": "I believe in being able to solve problems both independently and as part of a team because I enjoy working as a team player. As well as being eager to learn new things, I also like taking on new challenges that would enhance my personal growth."
+  "text4": "I believe in being able to solve problems both independently and as part of a team because I enjoy working as a team player. As well as being eager to learn new things, I also like taking on new challenges that would enhance my personal growth.",
+  "uni1": "Lahore University of Management Sciences",
+  "uni2": "Kingston University London",
+  "unilink1": "https://lums.edu.pk/",
+  "unilink2": "https://www.kingston.ac.uk/",
+  "place1": "Lahore, Pakistan",
+  "place2": "London, United Kingdom",
+  "degree1": "BS Computer Science",
+  "degree2": "MS Software Engineering",
+  "date1": "2016-2020",
+  "date2": "2022-2023",
+  "relevantCourses1": {
+    "course1": "Advanced Programming",
+    "course2": "Network Security",
+    "course3": "Software Engineering",
+    "course4": "Data Structures & Algorithms"
+  },
+  "relevantCourses2": {
+    "course1": "Software Architecture and Programming Models",
+    "course2": "Agile Project Development",
+    "course3": "Software Quality Engineering",
+    "course4": "Business in Practice"
+  }
 }
