@@ -1,98 +1,31 @@
-import styled from "styled-components";
 import Texts from "./bodyText.json";
-import css from "@styled-system/css";
 import Skills from "../Skills";
-
-const Container = styled.div`
-  padding-top: 10%;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const BodyTitle = styled.h1`
-  text-align: center;
-  ${css({
-    fontSize: ["35px", null, null, "50px"],
-    mt: ["10%", null, null, "10%"],
-  })}
-`;
-
-const TextContent = styled.div`
-  p {
-    margin: 0;
-    ${css({
-      mt: 3,
-      width: ["90vw", null, null, "80vw"],
-      textAlign: ["center", null, null, null, null, null, null, null, "left"],
-    })}
-  }
-
-  ${css({
-    justifyContent: ["center", null, null, "space-between"],
-    flexDirection: ["column", null, null, "row"],
-    maxWidth: ["90vw", null, null, "80vw"],
-  })}
-`;
-
-const EducationFlex = styled.div`
-  display: flex;
-  margin-top: 40px;
-  ${css({
-    justifyContent: ["center", null, null, "space-between"],
-    flexDirection: ["column", null, null, "row"],
-    maxWidth: ["90vw", null, null, "50vw"],
-  })}
-`;
-
-const EduFlex = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const EducationLogo = styled.img`
-  margin-bottom: 10px;
-  ${css({
-    width: "170px",
-    height: "170px",
-  })}
-`;
-
-const EducationContent = styled.div`
-  p {
-    margin: 0px;
-    ${css({
-      width: ["90vw", null, null, "40vw"],
-      textAlign: "center",
-    })}
-  }
-`;
-
-const MyImage = styled.img`
-  height: 20%;
-  border-radius: 3%;
-  box-shadow: 5px 5px 2px;
-
-  ${css({
-    width: ["90vw", null, null, "80vw"],
-  })}
-`;
+import {
+  Container,
+  MyImage,
+  BodyTitle,
+  TextFlex,
+  TextContent,
+  EducationFlex,
+  EduFlex,
+  EducationLogo,
+  EducationContent,
+} from "./styles";
 
 const Body: React.FC = () => {
   return (
     <Container>
       <div id="about">
-        <MyImage src="/ammarjussa.png" />
-        <BodyTitle>About Me</BodyTitle>
-        <TextContent>
-          <p>{Texts.text}</p>
-          <p>{Texts.text2}</p>
-          <p>{Texts.text3}</p>
-          <p>{Texts.text4}</p>
-        </TextContent>
+        <TextFlex>
+          <MyImage src="/ammarjussa.png" />
+          <BodyTitle>About Me</BodyTitle>
+          <TextContent>
+            <p>{Texts.text}</p>
+            <p>{Texts.text2}</p>
+            <p>{Texts.text3}</p>
+            <p>{Texts.text4}</p>
+          </TextContent>
+        </TextFlex>
         <BodyTitle>Education</BodyTitle>
         <EducationFlex>
           <EduFlex>
@@ -100,7 +33,9 @@ const Body: React.FC = () => {
             <EducationContent>
               <p>
                 <b>University Name: </b>
-                {Texts.uni1}
+                <a href={Texts.unilink1} target="_blank">
+                  {Texts.uni1}
+                </a>
               </p>
               <p>
                 <b>Place: </b>
@@ -128,7 +63,9 @@ const Body: React.FC = () => {
             <EducationContent>
               <p>
                 <b>University Name: </b>
-                {Texts.uni2}
+                <a href={Texts.unilink2} target="_blank">
+                  {Texts.uni2}
+                </a>
               </p>
               <p>
                 <b>Place: </b>

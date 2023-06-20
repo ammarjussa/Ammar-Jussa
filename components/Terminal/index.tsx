@@ -46,14 +46,13 @@ const Terminal = () => {
             <CodeColor color="#74eb70">Python</CodeColor>', '
             <CodeColor color="#74eb70">C++</CodeColor>'] <br /> &#125;; <br />
             <br />
-            <CodeColor color="#d270eb">if</CodeColor>&nbsp; (
+            <CodeColor color="#d270eb">if</CodeColor> (
             <CodeColor color="#70a5eb">me</CodeColor>.
             <CodeColor color="#70a5eb">langs</CodeColor>.
             <CodeColor color="#e69941">includes</CodeColor>('
             <CodeColor color="#74eb70">JavaScript</CodeColor>')) &#123;
             <br />
-            &emsp;&emsp;&emsp;{" "}
-            <CodeColor color="#70a5eb">console.log</CodeColor>(
+            &emsp;&emsp; <CodeColor color="#70a5eb">console.log</CodeColor>(
             <CodeColor color="#74eb70">'I am Awesome!'</CodeColor>); <br />{" "}
             &#125;
           </Container>
