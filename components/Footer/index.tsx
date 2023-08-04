@@ -16,7 +16,7 @@ const Rights = styled.p`
 const Footer = () => {
   return (
     <Container>
-      <Rights>© Ammar Jussa 2022. All rights reserved</Rights>
+      <Rights>© Ammar Jussa 2023. All rights reserved</Rights>
     </Container>
   );
 };
