@@ -65,7 +65,7 @@ const ProjectText = styled.p`
   margin: 0;
 
   ${css({
-    width: ["90vw", null, null, null, null, "40vw", null, null, "30vw"],
+    width: ["90vw", null, null, null, null, "40vw", null, null, "35vw"],
     mt: ["20px"],
   })}
 `;
