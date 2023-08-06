@@ -1,7 +1,14 @@
 import styled from "styled-components";
 import Project1 from "./Project1";
 import Project2 from "./Project2";
-import { Tefi, Portfolio, Twitter_Web3, Bank_App } from "./ProjectsList";
+import {
+  Tefi,
+  Portfolio,
+  Twitter_Web3,
+  Bank_App,
+  Raaz,
+  TefiAgora,
+} from "./ProjectsList";
 
 const Container = styled.div`
   padding-top: 3%;
@@ -23,8 +30,10 @@ const Projects: React.FC<Props> = ({ theme }) => {
       <BodyTitle>View My Work</BodyTitle>
       <Container>
         <Project1 theme={theme} project={Tefi} />
-        <Project2 theme={theme} project={Twitter_Web3} />
-        <Project1 theme={theme} project={Portfolio} />
+        <Project2 theme={theme} project={Raaz} />
+        <Project1 theme={theme} project={TefiAgora} />
+        <Project2 theme={theme} project={Portfolio} />
+        <Project1 theme={theme} project={Twitter_Web3} />
         <Project2 theme={theme} project={Bank_App} />
       </Container>
     </>

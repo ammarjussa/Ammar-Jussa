@@ -1,8 +1,9 @@
 export const Tefi = {
   heading: "TeFi App",
-  subHeading: "Cryptocurrency Portfolio App",
+  subHeading:
+    "A Decentralized Portfolio Tracker and Chat Platform on Terra Blockchain",
   description:
-    "A portfolio management web application that lets you keep  track of your cryptocurrecies in numerous DeFi platforms in the terra ecosystem. It also displays price charts and daily changes in the prices of cryptocurrecies using terra blockchain.",
+    "A user-friendly portfolio tracker built on the Terra blockchain. Easily monitor your crypto holdings, send Luna tokens securely to different addresses, and stay up-to-date with real-time Luna supply information. Experience the added benefit of Club, a decentralized chat page where you can send anonymous messages, fostering private and censorship-resistant interactions with the community",
   web: "/tefi-web.png",
   phone: "/tefi-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
@@ -12,9 +13,10 @@ export const Tefi = {
 
 export const Portfolio = {
   heading: "Portfolio App",
-  subHeading: "A portfolio App containing my Skills and Projects",
+  subHeading:
+    "A portfolio App containing my personal details, education, skills and projects",
   description:
-    "A Web App which includes my personal details, skills which I am confident in, stuff that I am passionate about, projects that I have done uptil now and a contact form for contacting if someone needs my assistance.",
+    "An app where you can explore my professional background, education, and skills. Discover a collection of my projects and get in touch easily using the provided contact information. This platform serves as an avenue to showcase my achievements and expertise across various domains.",
   web: "/portfolio-web2.png",
   phone: "/portfolio-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS"],
@@ -42,4 +44,26 @@ export const Bank_App = {
   web: "/banking.png",
   tools: ["React", "Java", "Spring", "MongoDB"],
   github: "https://github.com/ammarjussa/Bank-Application",
+};
+
+export const Raaz = {
+  heading: "Raaz App",
+  subHeading: "Secure Bitcoin Wallet and Decentralized Chatting Platform",
+  description:
+    "Raaz App is a cutting-edge application that seamlessly integrates a secure Bitcoin wallet with a revolutionary decentralized chatting feature. With the ability to create a personal wallet and chat rooms, users can engage in private conversations protected by robust cryptographic protocols and conduct peer-to-peer transactions without any intermediaries",
+  web: "/raaz-web.png",
+  phone: "/raaz-phone.png",
+  tools: ["NextJS", "TypeScript", "NodeJS", "Bitcoin"],
+  live: "https://raaz.ammarjussa.com/",
+};
+
+export const TefiAgora = {
+  heading: "Tefi Agora",
+  subHeading: "Empowering Decentralized Discussions on Terra Blockchain",
+  description:
+    "A decentralized forum that operates on the secure foundation of the Terra blockchain. The users can create discussions (or threads), as well as contribute their thoughts and opinions in other discussions, all stored immutably and transparently on the Terra chain",
+  web: "/agora-web.png",
+  phone: "/agora-phone.png",
+  tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
+  live: "https://tefi.ammarjussa.com/agora",
 };
