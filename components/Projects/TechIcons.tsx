@@ -13,6 +13,7 @@ import RustIcon from "../../public/rust.svg";
 import StyledIcon from "../../public/styled-components.svg";
 import StyledPlainIcon from "../../public/styled-components-plain.svg";
 import CssIcon from "../../public/css.svg";
+import CssPlainIcon from "../../public/css-plain.svg";
 import TailwindIcon from "../../public/tailwindcss.svg";
 import TailwindPlainIcon from "../../public/tailwindcssplain.svg";
 import SolidityIcon from "../../public/solidity.svg";
@@ -109,7 +110,7 @@ const TechIcons: React.FC<Props> = ({ tech, theme }) => {
           return theme === LIGHT_THEME ? (
             <CssIcon key={i} />
           ) : (
-            <CssIcon key={i} />
+            <CssPlainIcon key={i} />
           );
         else if (t === "Solidity")
           return theme === LIGHT_THEME ? (

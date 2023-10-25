@@ -4,10 +4,11 @@ import Project2 from "./Project2";
 import {
   Tefi,
   Portfolio,
-  Twitter_Web3,
   Bank_App,
   Raaz,
   TefiAgora,
+  FoodBubble,
+  SecureFlow,
 } from "./ProjectsList";
 
 const Container = styled.div`
@@ -31,10 +32,11 @@ const Projects: React.FC<Props> = ({ theme }) => {
       <Container>
         <Project1 theme={theme} project={Tefi} />
         <Project2 theme={theme} project={Raaz} />
-        <Project1 theme={theme} project={TefiAgora} />
-        <Project2 theme={theme} project={Portfolio} />
-        <Project1 theme={theme} project={Twitter_Web3} />
-        <Project2 theme={theme} project={Bank_App} />
+        <Project1 theme={theme} project={SecureFlow} />
+        <Project2 theme={theme} project={FoodBubble} />
+        <Project1 theme={theme} project={Portfolio} />
+        <Project2 theme={theme} project={TefiAgora} />
+        <Project1 theme={theme} project={Bank_App} />
       </Container>
     </>
   );

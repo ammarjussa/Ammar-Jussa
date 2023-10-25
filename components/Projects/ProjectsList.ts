@@ -24,18 +24,6 @@ export const Portfolio = {
   live: "https://ammarjussa.com/",
 };
 
-export const Twitter_Web3 = {
-  heading: "Twitter Web3 App",
-  subHeading: "A Web3 Twitter App build on Polygon",
-  description:
-    "A twitter clone with features like connecting metamask, adding posts and liking the tweets. The additional feature of donating MATIC token to tweeters is also added which is specific to web3. This logic is implemented with smart contracts using Solidity.",
-  web: "/twitter-web.png",
-  phone: "/twitter-phone.png",
-  tools: ["NextJS", "TypeScript", "Solidity"],
-  github: "https://github.com/ammarjussa/Twitter-3.0",
-  live: "https://twitter-polygon-web3.netlify.app/",
-};
-
 export const Bank_App = {
   heading: "Banking Application",
   subHeading: "A simple banking system",
@@ -66,4 +54,28 @@ export const TefiAgora = {
   phone: "/agora-phone.png",
   tools: ["NextJS", "TypeScript", "NodeJS", "GraphQL"],
   live: "https://tefi.ammarjussa.com/agora",
+};
+
+export const FoodBubble = {
+  heading: "Food Bubble",
+  subHeading: "Streamlining Dietary Planning and Recipe Management",
+  description:
+    "FoodBubble is a user-friendly application designed to simplify dietary planning and recipe management. It empowers users to effortlessly create personalized dietary plans, access an extensive recipe library, and efficiently store and manage their favorite recipes. The following is just the designs of the application",
+  github: "https://github.com/ammarjussa/foodbubble",
+  live: "https://foodbubble.ammarjussa.com/",
+  tools: ["React", "CSS"],
+  web: "/foodbubble-web.png",
+  phone: "/foodbubble-phone.png",
+};
+
+export const SecureFlow = {
+  heading: "Secure Flow",
+  subHeading: "A Blockchain-Based Supply Chain Management Solution",
+  description:
+    "Secure Flow is a cutting-edge supply chain management application leveraging blockchain technology. It is designed to enhance transparency, efficiency, and security within the supply chain industry. The project aims to modernize the flow of goods, reduce operational complexities, and mitigate risks associated with traditional supply chain processes, ultimately revolutionizing the way goods are managed and tracked.",
+  tools: ["NextJS", "TypeScript", "Tailwind", "Solidity", "Firebase"],
+  github: "https://github.com/ammarjussa/Secure-Flow",
+  live: "https://secureflow.ammarjussa.com/",
+  web: "/agora-web.png",
+  phone: "/agora-phone.png",
 };
